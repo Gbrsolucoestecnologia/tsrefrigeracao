@@ -27,13 +27,14 @@ function ClientCard({ client, interactive = true }: { client: (typeof clients)[n
 
   return (
     <li className={`client-card ${client.north ? 'client-card--north' : ''}`}>
-      {client.url && interactive ? (
+      {client.url ? (
         <a
           href={client.url}
           target="_blank"
           rel="noopener noreferrer"
           className="client-link"
-          aria-label={`Visitar o site oficial de ${client.name} (abre em nova aba)`}
+          aria-label={interactive ? `Visitar o site oficial de ${client.name} (abre em nova aba)` : undefined}
+          tabIndex={interactive ? undefined : -1}
           onClick={() => trackEvent('client_site_click', { client: client.name })}
         >
           {content}
