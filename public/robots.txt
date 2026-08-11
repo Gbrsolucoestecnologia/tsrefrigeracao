@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gbrsolucoestecnologia.github.io/tsrefrigeracao/sitemap.xml
