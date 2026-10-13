@@ -1,25 +1,1336 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#071d49" />
-    <meta name="description" content="Instalação, manutenção, limpeza e higienização de ar-condicionado em Fortaleza para residências e empresas. Solicite atendimento pelo WhatsApp." />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <link rel="canonical" href="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="TS Refrigeração em Fortaleza | Instalação e Manutenção" />
-    <meta property="og:description" content="Instalação, manutenção, limpeza e higienização de ar-condicionado em Fortaleza para residências e empresas." />
-    <meta property="og:url" content="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/" />
-    <meta property="og:site_name" content="TS Refrigeração & Climatização" />
-    <meta property="og:image" content="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/images/hero-technician.webp" />
-    <meta property="og:image:alt" content="Técnico realizando manutenção em ar-condicionado" />
-    <link rel="icon" type="image/png" href="./images/logo-favicon.png" />
-    <title>TS Refrigeração em Fortaleza | Instalação e Manutenção</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TS Refrigeração | Climatização e Higienização de Equipamentos</title>
+<meta name="description" content="Conheça os serviços da TS Refrigeração em climatização, manutenção de ar-condicionado e higienização de bebedouros e equipamentos industriais.">
+<link rel="canonical" href="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="TS Refrigeração | Climatização e Higienização de Equipamentos">
+<meta property="og:description" content="Climatização, manutenção de ar-condicionado e higienização de bebedouros e equipamentos industriais.">
+<meta property="og:url" content="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/">
+<meta property="og:image" content="https://gbrsolucoestecnologia.github.io/tsrefrigeracao/assets/og-image.jpg">
+<meta name="theme-color" content="#23467A">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-tecnico-teto.webp" fetchpriority="high">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HVACBusiness","name":"TS Refrigeração & Climatização","telephone":"+55 85 98534-1851","email":"ts.refrigeracaoclimatiza@gmail.com","areaServed":"Fortaleza e localidades próximas","legalName":"Thiago Bernardo da Silva","taxID":"54.031.988/0001-85","sameAs":["https://www.instagram.com/ts.refrigeracao_climatizacao/"],"url":"https://gbrsolucoestecnologia.github.io/tsrefrigeracao/"}</script>
+<style>
+:root{
+ --marinho:#23467A; --tinta:#0F2742; --texto:#2B3D52; --suave:#5A6B7E;
+ --gelo:#EEF4F9; --geada:#D3E1EC; --branco:#fff;
+ --ar:#2E8FD1; --agua:#0E7C79; --agua-claro:#E6F4F2; --agua-linha:#BFE0DC;
+ --wa:#25D366; --erro:#B42318;
+ --r-lg:26px; --r-md:16px; --r-sm:10px;
+ --hdr:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(var(--hdr) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1.0625rem;line-height:1.6;color:var(--texto);background:var(--branco);overflow-x:hidden}
+img,video{max-width:100%;display:block}
+h1,h2,h3{color:var(--tinta);font-stretch:118%;font-weight:760;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(2.2rem,5.2vw,4.1rem);line-height:1.02}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem);line-height:1.06}
+h3{font-size:1.15rem;line-height:1.25;font-stretch:108%}
+p{margin:0}
+a{color:var(--marinho)}
+:focus-visible{outline:3px solid var(--ar);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.lead{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--suave);max-width:60ch}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--marinho);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+.skip:focus{top:12px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;font:inherit;font-weight:650;font-size:1rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background-color .2s,border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-pri{background:var(--marinho);color:#fff}
+.btn-pri:hover{background:var(--tinta);box-shadow:0 10px 24px -12px rgba(35,70,122,.7)}
+.btn-sec{background:transparent;color:var(--marinho);border-color:var(--marinho)}
+.btn-sec:hover{background:var(--marinho);color:#fff}
+.btn-wa{background:var(--wa);color:#073b1d}
+.btn-wa svg{width:22px;height:22px}
+.btn-agua{background:var(--agua);color:#fff}
+.btn-agua:hover{background:#095f5d}
+
+/* cabeçalho */
+.hdr{position:sticky;top:0;z-index:60;transition:background-color .3s,box-shadow .3s}
+.hdr.scrolled{background:rgba(255,255,255,.94);box-shadow:0 1px 0 var(--geada),0 8px 30px -20px rgba(15,39,66,.35)}
+@supports (backdrop-filter:blur(8px)){.hdr.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(12px) saturate(1.4)}}
+.hdr-in{display:flex;align-items:center;gap:24px;height:var(--hdr)}
+.hdr-logo img{height:42px;width:auto}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{position:relative;white-space:nowrap;padding:8px 10px;text-decoration:none;color:var(--texto);font-weight:550;font-size:.95rem;border-radius:8px}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;background:var(--ar);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover::after,.nav a[aria-current="true"]::after{transform:scaleX(1)}
+.nav a[aria-current="true"]{color:var(--marinho)}
+.hdr .btn{min-height:44px;padding:0 20px;font-size:.95rem;white-space:nowrap}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--geada);background:#fff;cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--tinta);border-radius:2px;position:relative;transition:transform .25s,opacity .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.mnav{display:none}
+@media (max-width:1100px){
+ .nav,.hdr .btn{display:none}
+ .burger{display:inline-flex}
+ .mnav{position:fixed;left:0;right:0;top:calc(var(--hdr) + env(safe-area-inset-top,0px));background:#fff;border-bottom:1px solid var(--geada);box-shadow:0 20px 40px -20px rgba(15,39,66,.4);padding:12px clamp(18px,4vw,40px) 22px;display:flex;flex-direction:column;gap:2px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;max-height:calc(100dvh - var(--hdr));overflow:auto}
+ .mnav.open{opacity:1;transform:none;visibility:visible}
+ .mnav a{padding:14px 6px;text-decoration:none;color:var(--tinta);font-weight:600;border-bottom:1px solid var(--gelo)}
+ .hdr .mnav .btn{display:inline-flex;margin-top:14px;border-bottom:0;color:#fff}
+ .hdr:has(.mnav.open){background:#fff}
+}
+
+/* hero */
+.hero{position:relative;background:var(--gelo);margin-top:calc(-1 * var(--hdr));padding:calc(var(--hdr) + clamp(28px,4vw,56px)) 0 clamp(56px,7vw,96px);overflow:hidden;min-height:min(100svh,940px);display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--geada) 1px,transparent 1px),linear-gradient(90deg,var(--geada) 1px,transparent 1px);background-size:48px 48px;opacity:.55;mask-image:linear-gradient(105deg,#000 0%,transparent 60%);-webkit-mask-image:linear-gradient(105deg,#000 0%,transparent 60%);pointer-events:none}
+.hero>.wrap{position:relative;z-index:1}
+.hero-neve{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-neve i{position:absolute;top:-12px;border-radius:50%;background:#A9CDE8;opacity:0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,80px);align-items:center}
+.hero-logo{width:min(250px,60vw);height:auto;margin-bottom:30px}
+.hero h1{font-size:clamp(2.3rem,4.9vw,4.2rem);max-width:none;line-height:1.03;text-wrap:balance}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}
+.hero h1 .w>span{display:inline-block}
+.c-ar{color:#1F74B0}
+.c-agua{color:var(--agua)}
+.hero .lead{margin-top:24px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px;max-width:620px}
+.door{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-md);background:rgba(255,255,255,.85);border:1px solid var(--geada);text-decoration:none;color:var(--texto);transition:border-color .2s,transform .2s,box-shadow .2s}
+.door:hover{transform:translateY(-3px);border-color:var(--ar);box-shadow:0 16px 30px -22px rgba(35,70,122,.6)}
+.door.agua:hover{border-color:var(--agua)}
+.door svg{flex:none;width:26px;height:26px;color:var(--ar);margin-top:2px}
+.door.agua svg{color:var(--agua)}
+.door b{display:block;color:var(--tinta);font-stretch:110%;font-size:1rem}
+.door span{font-size:.9rem;color:var(--suave);line-height:1.4}
+.hero-media{position:relative;justify-self:end;width:100%;max-width:440px;margin:0}
+.hero-media::before{content:"";position:absolute;inset:7% -9% -5% 16%;border-radius:44px;background:linear-gradient(160deg,#DDEBF6,#C6DDEE);transform:rotate(5deg)}
+.hero-media .flake-mark{position:absolute;width:300px;height:300px;color:var(--ar);opacity:.13;left:-130px;top:-110px}
+.hero-foto{position:relative;margin:0;border-radius:30px;overflow:hidden;aspect-ratio:4/5;background:var(--geada);box-shadow:0 40px 70px -34px rgba(15,39,66,.6)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.chip{position:absolute;z-index:2;display:flex;gap:11px;align-items:center;padding:11px 16px 11px 11px;border-radius:16px;background:rgba(255,255,255,.94);box-shadow:0 20px 40px -18px rgba(15,39,66,.45);font-size:.8rem;color:var(--suave);line-height:1.3;text-decoration:none;max-width:290px}
+@supports (backdrop-filter:blur(8px)){.chip{background:rgba(255,255,255,.82);backdrop-filter:blur(10px) saturate(1.4)}}
+.chip b{display:block;color:var(--tinta);font-size:.92rem;font-stretch:108%}
+.chip .ci{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:var(--gelo);color:#1F74B0}
+.chip .ci svg{width:21px;height:21px}
+.chip-b .ci{background:#E2F7E9;color:#128C4A}
+a.chip:hover{box-shadow:0 22px 44px -16px rgba(15,39,66,.55)}
+.chip-a{left:-36px;top:12%}
+.chip-b{right:-24px;bottom:11%}
+.rolar{position:absolute;left:50%;bottom:22px;z-index:1;width:26px;height:42px;margin-left:-13px;border:2px solid #B9CFE0;border-radius:14px}
+.rolar span{position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--marinho)}
+@media (max-width:860px){
+ .hero{min-height:0}
+ .hero-grid{grid-template-columns:1fr}
+ .hero-media{justify-self:stretch;max-width:none}
+ .hero-media::before{inset:6% -4% -4% 10%;border-radius:32px}
+ .hero-foto{max-height:72vh}
+ .chip-a{left:12px;top:12px}
+ .chip-b{right:12px;bottom:12px}
+ .doors{grid-template-columns:1fr}
+ .rolar{display:none}
+}
+
+/* abertura */
+.abertura{display:none}
+.intro-on .abertura{display:grid;position:fixed;inset:0;z-index:120;place-items:center;background:var(--gelo);background-image:radial-gradient(circle at 50% 45%,#fff 0,rgba(255,255,255,0) 55%)}
+.intro-on body{overflow:hidden}
+.intro-in{display:grid;justify-items:center;text-align:center}
+.intro-logo{width:min(360px,72vw);height:auto;clip-path:inset(0 100% 0 0);animation:logo-revela 1s .15s cubic-bezier(.65,0,.25,1) forwards}
+.intro-barra{display:block;width:min(360px,72vw);height:3px;margin-top:26px;border-radius:3px;background:var(--geada);overflow:hidden}
+.intro-barra i{display:block;height:100%;background:linear-gradient(90deg,#2E8FD1,#0E7C79);transform:scaleX(0);transform-origin:left;animation:barra 1.15s .3s cubic-bezier(.4,0,.2,1) forwards}
+.intro-txt{margin-top:16px;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--suave);font-weight:600;opacity:0;animation:subir .6s .75s both}
+.intro-sai .abertura{animation:cortina .85s cubic-bezier(.7,0,.2,1) forwards}
+.intro-sai .intro-in{animation:intro-some .5s ease forwards}
+@keyframes logo-revela{to{clip-path:inset(0 0 0 0)}}
+@keyframes barra{to{transform:scaleX(1)}}
+@keyframes cortina{to{clip-path:inset(0 0 100% 0)}}
+@keyframes intro-some{to{transform:translateY(-30px);opacity:0}}
+
+/* entrada do topo */
+@media (prefers-reduced-motion:no-preference){
+ .js:not(.hero-go) .hero .h-a,.js:not(.hero-go) .hdr{opacity:0}
+ .js:not(.hero-go) .hero h1 .w>span{transform:translateY(110%)}
+ .js:not(.hero-go) .hero-foto{clip-path:inset(100% 0 0 0 round 30px)}
+ .js:not(.hero-go) .hero-media::before{opacity:0}
+ .hero-go .hdr{animation:hdr-desce .7s .25s cubic-bezier(.2,.8,.2,1) both}
+ .hero-go .hero .h-a{animation:subir .7s var(--hd,0s) cubic-bezier(.2,.8,.2,1) both}
+ .hero-go .hero h1 .w>span{animation:palavra .85s calc(.4s + var(--i) * .07s) cubic-bezier(.2,.8,.2,1) both}
+ .hero-go .hero-foto{animation:foto-abre 1.25s .35s cubic-bezier(.7,0,.2,1) both}
+ .hero-go .hero-foto img{animation:foto-zoom 2s .35s cubic-bezier(.2,.7,.2,1) both}
+ .hero-go .hero-media::before{animation:placa 1.1s .2s cubic-bezier(.2,.8,.2,1) both}
+ .hero-go .hero-neve i{animation-name:neve-hero;animation-timing-function:linear;animation-iteration-count:infinite}
+ .hero .flake-mark{animation:girar 90s linear infinite}
+ .rolar span{animation:rolar 1.8s ease-in-out infinite}
+}
+@keyframes hdr-desce{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+@keyframes palavra{from{transform:translateY(110%)}to{transform:none}}
+@keyframes foto-abre{from{clip-path:inset(100% 0 0 0 round 30px)}to{clip-path:inset(0 0 0 0 round 30px)}}
+@keyframes foto-zoom{from{transform:scale(1.18)}to{transform:none}}
+@keyframes placa{from{transform:rotate(-4deg) translateY(30px);opacity:0}to{transform:rotate(5deg);opacity:1}}
+@keyframes subir{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+@keyframes neve-hero{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:.8}85%{opacity:.6}100%{transform:translate3d(40px,960px,0);opacity:0}}
+@keyframes rolar{0%{transform:translateY(0);opacity:0}30%{opacity:1}100%{transform:translateY(14px);opacity:0}}
+
+/* cabeçalho das áreas */
+.area{padding:clamp(64px,9vw,120px) 0}
+.area-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,36px);align-items:end;padding-bottom:clamp(28px,4vw,44px);border-bottom:1px solid var(--geada);margin-bottom:clamp(36px,5vw,60px)}
+.area-top .alogo{height:clamp(40px,5vw,56px);width:auto;margin-bottom:18px}
+.area-top h2 .big{display:block;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.95;letter-spacing:-.035em}
+.area-top h2 .rest{display:block;margin-top:10px;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.15;color:var(--agua)}
+.area-top .lead{margin-top:16px}
+.area-top .switch{white-space:nowrap;justify-self:end;align-self:end;font-size:.95rem;font-weight:600;text-decoration:none;padding:10px 16px;border-radius:999px;border:1.5px solid currentColor}
+@media (max-width:760px){.area-top{grid-template-columns:1fr}.area-top .switch{justify-self:start}}
+
+/* área 1 */
+.clima{background:#fff;position:relative;overflow:hidden}
+.clima>.wrap{position:relative}
+.sopro{position:absolute;left:0;right:0;top:0;height:420px;pointer-events:none;--gx:calc(max(clamp(18px,4vw,40px),(100% - 1180px)/2 + clamp(18px,4vw,40px)) + 28px);--gy:calc(clamp(64px,9vw,120px) + 26px)}
+.vento{position:absolute;inset:0;width:100%;height:100%}
+.vento path{fill:none;stroke:#2E8FD1;stroke-width:2;stroke-linecap:round;stroke-dasharray:.28 1;stroke-dashoffset:1.28;opacity:0}
+.floco{position:absolute;left:var(--gx);top:var(--gy);width:64px;height:64px;margin:-32px 0 0 -32px;opacity:0}
+.floco svg{width:100%;height:100%;display:block}
+.cristais i{position:absolute;left:var(--gx);top:var(--gy);width:12px;height:12px;margin:-6px 0 0 -6px;opacity:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%232E8FD1' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M10 1v18M2.2 5.5l15.6 9M2.2 14.5l15.6-9'/%3E%3C/svg%3E") center/contain no-repeat}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+ .clima .area-top .big{background-image:linear-gradient(90deg,#1F74B0 0 50%,var(--tinta) 50% 100%);background-size:200% 100%;background-position:0 0;-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+}
+@media (prefers-reduced-motion:no-preference){
+ .js .clima:not(.ativa) .area-top .alogo,.js .clima:not(.ativa) .area-top .lead,.js .clima:not(.ativa) .area-top .switch{opacity:0}
+ .js .clima:not(.ativa) .area-top .big{background-position:100% 0}
+ .clima.ativa .floco{animation:floco-pousa 1.4s cubic-bezier(.2,.8,.2,1) both}
+ .clima.ativa .cristais i{animation:cristal 1.1s .55s cubic-bezier(.1,.7,.3,1) both}
+ .clima.ativa .vento path{animation:soprar 1.6s .35s cubic-bezier(.4,0,.2,1) both}
+ .clima.ativa .vento path:nth-child(2){animation-delay:.5s}
+ .clima.ativa .vento path:nth-child(3){animation-delay:.65s}
+ .clima.ativa .area-top .alogo{animation:subir .6s .7s both}
+ .clima.ativa .area-top .big{animation:congelar 1.3s .75s cubic-bezier(.5,0,.3,1) both}
+ .clima.ativa .area-top .lead{animation:subir .6s 1.3s both}
+ .clima.ativa .area-top .switch{animation:subir .6s 1.5s both}
+}
+@keyframes floco-pousa{0%{transform:translate(-60px,-50px) rotate(-180deg) scale(.3);opacity:0}35%{opacity:1}70%{transform:none;opacity:1}100%{transform:rotate(30deg) scale(1.35);opacity:0}}
+@keyframes cristal{0%{transform:translate(0,0) scale(.4) rotate(0);opacity:0}20%{opacity:.9}100%{transform:translate(var(--tx),var(--ty)) scale(1) rotate(120deg);opacity:0}}
+@keyframes soprar{0%{stroke-dashoffset:1.28;opacity:0}15%{opacity:.55}80%{opacity:.45}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes congelar{from{background-position:100% 0}to{background-position:0 0}}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-bottom:clamp(44px,6vw,72px)}
+.intro-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;background:var(--gelo)}
+.intro-photo img{width:100%;height:100%;object-fit:cover}
+.intro h3{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:14px}
+.ticks{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:10px}
+.ticks li{position:relative;padding-left:30px}
+.ticks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:2.5px solid var(--ar);border-bottom:2.5px solid var(--ar);transform:rotate(-45deg)}
+.hig .ticks li::before{border-color:var(--agua)}
+@media (max-width:860px){.intro{grid-template-columns:1fr}}
+.cards{display:flex;flex-wrap:wrap;gap:16px}
+.cards>.card{flex:1 1 300px}
+.hig .cards>.card{flex-basis:230px}
+.card{padding:26px 24px;border-radius:var(--r-md);background:#fff;border:1px solid var(--geada);transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--ar);box-shadow:0 18px 36px -26px rgba(35,70,122,.6)}
+.card-ic{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--gelo);color:var(--marinho);margin-bottom:18px;transition:transform .3s}
+.card:hover .card-ic{transform:rotate(-6deg) scale(1.06)}
+.card-ic svg{width:24px;height:24px}
+.card h3{margin-bottom:8px}
+.card p{font-size:.97rem;color:var(--suave);line-height:1.55}
+.hig .card{border-color:var(--agua-linha)}
+.hig .card:hover{border-color:var(--agua);box-shadow:0 18px 36px -26px rgba(14,124,121,.6)}
+.hig .card-ic{background:var(--agua-claro);color:var(--agua)}
+.subhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin:clamp(52px,7vw,84px) 0 22px}
+.subhead h3{font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.subhead a{font-weight:600}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mini-item{padding:0;border:0;background:var(--gelo);border-radius:var(--r-md);overflow:hidden;cursor:zoom-in;aspect-ratio:3/4}
+.mini-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mini-item:hover img{transform:scale(1.04)}
+@media (max-width:760px){.mini{grid-template-columns:repeat(2,1fr)}}
+.area-cta{margin-top:clamp(40px,5vw,60px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:clamp(22px,3vw,32px);border-radius:var(--r-lg);background:var(--gelo)}
+.area-cta p{font-size:1.15rem;color:var(--tinta);font-weight:600;font-stretch:108%;max-width:40ch}
+
+/* transição */
+.passagem{position:relative;background:var(--tinta);color:#fff;overflow:hidden;padding:clamp(90px,12vw,150px) 0}
+.passagem .onda{position:absolute;left:0;width:100%;height:clamp(40px,6vw,80px);display:block}
+.passagem .onda.top{top:-1px}
+.passagem .onda.bot{bottom:-1px}
+.passagem .fluxo{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.fluxo path{fill:none;stroke-width:1.5;stroke-linecap:round;stroke-dasharray:180 620}
+.passagem-txt{position:relative;max-width:820px}
+.passagem-txt p.big{font-size:clamp(1.7rem,4.2vw,3.2rem);line-height:1.08;font-weight:720;font-stretch:118%;letter-spacing:-.02em;color:#fff}
+.passagem-txt p.big span{display:block;color:#8FD6D2}
+.passagem-txt p.small{margin-top:18px;color:#B8C8DA;max-width:52ch}
+.neve{position:absolute;inset:0;pointer-events:none}
+.neve i{position:absolute;top:-10px;width:6px;height:6px;border-radius:50%;background:#fff;opacity:.0}
+@media (prefers-reduced-motion:no-preference){
+ .passagem.in .fluxo path{animation:fluir 7s linear infinite}
+ .passagem.in .neve i{animation:cair linear infinite}
+}
+@keyframes fluir{to{stroke-dashoffset:-800}}
+@keyframes cair{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:.75}90%{opacity:.5}100%{transform:translate3d(30px,520px,0);opacity:0}}
+
+/* área 2 */
+.hig{background:var(--agua-claro);position:relative;overflow:hidden}
+.hig>.wrap{position:relative}
+.splash{position:absolute;left:0;right:0;top:0;height:640px;pointer-events:none;--gx:calc(max(clamp(18px,4vw,40px),(100% - 1180px)/2 + clamp(18px,4vw,40px)) + 70px);--gy:calc(clamp(64px,9vw,120px) + 26px)}
+.gota{position:absolute;top:0;left:var(--gx);width:36px;height:48px;margin:-48px 0 0 -18px;opacity:0;filter:drop-shadow(0 6px 10px rgba(14,124,121,.35))}
+.gota svg{width:100%;height:100%;display:block}
+.anel{position:absolute;left:var(--gx);top:var(--gy);width:260px;height:70px;margin:-35px 0 0 -130px;border:2px solid var(--agua);border-radius:50%;opacity:0}
+.bolhas{position:absolute;inset:0}
+.bolhas i{position:absolute;bottom:0;border-radius:50%;border:1.5px solid rgba(14,124,121,.55);background:rgba(255,255,255,.55);opacity:0}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+ .hig .area-top .big{background-image:linear-gradient(0deg,var(--agua) 0 50%,var(--tinta) 50% 100%);background-size:100% 200%;background-position:0 100%;-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+}
+@media (prefers-reduced-motion:no-preference){
+ .js .hig:not(.ativa) .area-top .alogo,.js .hig:not(.ativa) .area-top .rest,.js .hig:not(.ativa) .area-top .lead,.js .hig:not(.ativa) .area-top .switch{opacity:0}
+ .js .hig:not(.ativa) .area-top .big{background-position:0 0}
+ .hig.ativa .gota{animation:gota-cai .85s cubic-bezier(.55,0,1,.6) both}
+ .hig.ativa .anel{animation:ondular 1.5s cubic-bezier(.2,.6,.3,1) both}
+ .hig.ativa .anel:nth-of-type(2){animation-delay:.8s}
+ .hig.ativa .anel:nth-of-type(3){animation-delay:1.05s}
+ .hig.ativa .anel:nth-of-type(4){animation-delay:1.3s}
+ .hig.ativa .bolhas i{animation-name:bolha;animation-timing-function:cubic-bezier(.3,.1,.5,1);animation-fill-mode:both}
+ .hig.ativa .area-top .alogo{animation:subir .6s .85s both}
+ .hig.ativa .area-top .big{animation:encher 1.4s 1s cubic-bezier(.5,0,.3,1) both}
+ .hig.ativa .area-top .rest{animation:subir .6s 1.6s both}
+ .hig.ativa .area-top .lead{animation:subir .6s 1.8s both}
+ .hig.ativa .area-top .switch{animation:subir .6s 2s both}
+ .passagem.in .onda.bot2{animation:deriva 12s linear infinite}
+}
+@keyframes gota-cai{0%{transform:translateY(-40px) scale(.9,1.15);opacity:0}20%{opacity:1}88%{transform:translateY(calc(var(--gy) + 20px)) scale(.9,1.15);opacity:1}100%{transform:translateY(calc(var(--gy) + 28px)) scale(1.6,.25);opacity:0}}
+@keyframes ondular{0%{transform:scale(.08);opacity:.85}100%{transform:scale(1.5);opacity:0}}
+@keyframes encher{from{background-position:0 0}to{background-position:0 100%}}
+@keyframes bolha{0%{transform:translate3d(0,0,0) scale(.5);opacity:0}15%{opacity:.9}100%{transform:translate3d(var(--sx),-520px,0) scale(1);opacity:0}}
+@keyframes deriva{to{transform:translate3d(-50%,0,0)}}
+.passagem .onda.bot2{width:200%;height:clamp(54px,8vw,104px);opacity:.45}
+.hig .area-top{border-color:var(--agua-linha)}
+.hig .area-top .switch{color:var(--agua)}
+.clima .area-top .switch{color:var(--marinho)}
+.hig-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;margin-bottom:clamp(44px,6vw,72px)}
+.vduo{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.vduo .desce{margin-top:56px}
+.vframe{position:relative;margin:0;padding:8px;border-radius:26px;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(150deg,#2E8FD1,#0E7C79) border-box;border:1.5px solid transparent;box-shadow:0 2px 0 rgba(255,255,255,.6) inset,0 30px 60px -28px rgba(14,124,121,.55),0 8px 18px -12px rgba(15,39,66,.25)}
+.vtela{position:relative;border-radius:18px;overflow:hidden;background:var(--tinta);aspect-ratio:9/16}
+.vtela video{display:block;width:100%;height:100%;object-fit:cover}
+.vtela::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),inset 0 -60px 50px -40px rgba(15,39,66,.45);pointer-events:none}
+.vselo{position:absolute;top:10px;left:10px;z-index:2;display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--agua);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;pointer-events:none}
+.vselo i{width:7px;height:7px;border-radius:50%;background:#E5484D;box-shadow:0 0 0 3px rgba(229,72,77,.2)}
+.vframe figcaption{display:flex;align-items:center;gap:10px;padding:12px 8px 6px;color:var(--tinta);font-weight:650;font-size:.9rem;line-height:1.3;font-stretch:106%}
+.vframe figcaption svg{flex:none;width:28px;height:28px;padding:6px;border-radius:50%;background:var(--agua-claro);color:var(--agua)}
+.vplay{position:absolute;inset:0;display:grid;place-items:center;border:0;background:transparent;cursor:pointer;z-index:1}
+.vplay[hidden]{display:none}
+.vplay span{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(15,39,66,.5)}
+.vplay span::before{content:"";margin-left:5px;border-left:17px solid var(--agua);border-top:10px solid transparent;border-bottom:10px solid transparent}
+@media (prefers-reduced-motion:no-preference){.vselo i{animation:piscar 1.6s ease-in-out infinite}}
+@keyframes piscar{50%{opacity:.35}}
+@media (max-width:520px){.vduo{gap:10px}.vframe{padding:6px;border-radius:20px}.vtela{border-radius:14px}.vframe figcaption{font-size:.8rem;padding:10px 4px 4px;gap:7px}.vframe figcaption svg{width:24px;height:24px;padding:5px}.vselo{font-size:.62rem;padding:4px 8px 4px 6px}}
+@media (max-width:860px){.hig-intro{grid-template-columns:1fr}.vduo .desce{margin-top:36px}}
+.passos{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:passo}
+.passo{background:#fff;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--agua-linha);counter-increment:passo}
+.passo-img{aspect-ratio:4/3;overflow:hidden;background:var(--agua-claro)}
+.passo-img img{width:100%;height:100%;object-fit:cover}
+.passo div.t{padding:18px 18px 22px}
+.passo h4{margin:0 0 6px;color:var(--tinta);font-stretch:110%;font-size:1.05rem;display:flex;gap:10px;align-items:baseline}
+.passo h4::before{content:counter(passo);display:inline-grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:var(--agua);color:#fff;font-size:.85rem}
+.passo p{font-size:.95rem;color:var(--suave);line-height:1.5}
+@media (max-width:960px){.passos{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.passos{grid-template-columns:1fr}}
+.hig .mini-item{background:#fff}
+.hig .area-cta{background:#fff;border:1px solid var(--agua-linha)}
+
+/* equipe em campo */
+.equipe{padding:clamp(64px,9vw,120px) 0 clamp(24px,4vw,40px);background:#fff}
+.equipe-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,4vw,56px);align-items:end;margin-bottom:clamp(28px,4vw,44px)}
+.equipe-top .lead{justify-self:end}
+.equipe-grid{display:grid;grid-template-columns:1.75fr 1fr;gap:clamp(12px,1.6vw,20px)}
+.eq-foto{position:relative;margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--gelo);height:clamp(340px,40vw,560px)}
+.eq-foto img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.eq-alta img{object-position:40% 30%}
+.eq-foto:hover img{transform:scale(1.03)}
+.eq-foto figcaption{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:14px;background:rgba(255,255,255,.92);color:var(--tinta);font-weight:650;font-size:.9rem;box-shadow:0 14px 30px -16px rgba(15,39,66,.5)}
+@supports (backdrop-filter:blur(8px)){.eq-foto figcaption{background:rgba(255,255,255,.82);backdrop-filter:blur(10px) saturate(1.4)}}
+.eq-ic{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--gelo);color:#1F74B0}
+.eq-ic svg{width:18px;height:18px}
+.eq-agua .eq-ic{background:var(--agua-claro);color:var(--agua)}
+@media (max-width:900px){.equipe-top{grid-template-columns:1fr;gap:12px}.equipe-top .lead{justify-self:start}}
+@media (max-width:600px){
+ .equipe{padding:56px 0 8px}
+ .equipe-grid{grid-template-columns:1fr;gap:10px}
+ .eq-foto{height:auto;border-radius:20px}
+ .eq-larga{aspect-ratio:4/3}
+ .eq-alta{aspect-ratio:4/5}
+ .eq-foto figcaption{left:10px;bottom:10px;font-size:.85rem}
+}
+
+/* galeria */
+.galeria{padding:clamp(64px,9vw,120px) 0;background:#fff}
+.galeria .lead{margin-top:14px}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:clamp(32px,5vw,52px) 0 clamp(44px,6vw,68px)}
+@media (max-width:760px){.ba-grid{grid-template-columns:1fr}}
+.ba figure{margin:0}
+.ba-box{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;background:var(--gelo);--pos:50%;user-select:none;touch-action:pan-y}
+.ba-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba-box .antes{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:var(--pos);width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.3);display:grid;place-items:center;pointer-events:none}
+.ba-knob::before{content:"";width:18px;height:10px;border-left:2.5px solid var(--marinho);border-right:2.5px solid var(--marinho)}
+.ba-tag{position:absolute;top:14px;padding:5px 12px;border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.06em;pointer-events:none}
+.ba-tag.a{left:14px;background:rgba(15,39,66,.82);color:#fff}
+.ba-tag.d{right:14px;background:#fff;color:var(--marinho)}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;-webkit-appearance:none;appearance:none}
+.ba-range:focus-visible + .ba-knob{outline:3px solid var(--ar);outline-offset:3px}
+.ba figcaption{margin-top:12px;font-weight:600;color:var(--tinta)}
+.ig-cta{margin-top:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,3vw,30px);border-radius:var(--r-lg);background:var(--gelo)}
+.ig-cta p{font-weight:600;color:var(--tinta);font-stretch:108%}
+.ig-cta .btn svg{width:20px;height:20px}
+.ig-cta .btn{white-space:normal;text-align:left}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filtros button{font:inherit;font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:999px;border:1.5px solid var(--geada);background:#fff;color:var(--texto);cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
+.filtros button[aria-pressed="true"]{background:var(--marinho);border-color:var(--marinho);color:#fff}
+.filtros button[data-f="hig"][aria-pressed="true"]{background:var(--agua);border-color:var(--agua)}
+.masonry{columns:3 260px;column-gap:14px}
+.g-item{break-inside:avoid;margin:0 0 14px;position:relative;border-radius:var(--r-md);overflow:hidden;background:var(--gelo);transition:opacity .3s}
+.g-item button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.g-item img{width:100%;height:auto;transition:transform .5s}
+.g-item:hover img{transform:scale(1.03)}
+.g-item .tag{position:absolute;left:10px;bottom:10px;padding:4px 10px;border-radius:999px;font-size:.78rem;font-weight:650;background:#fff;color:var(--marinho);pointer-events:none}
+.g-item[data-area="hig"] .tag{color:var(--agua)}
+.g-item[hidden]{display:none}
+
+/* lightbox */
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100dvh;width:100vw;height:100dvh;margin:0}
+.lb::backdrop{background:rgba(10,24,40,.92)}
+.lb-in{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:max(60px,env(safe-area-inset-top)) 64px max(24px,env(safe-area-inset-bottom))}
+.lb img{max-width:100%;max-height:calc(100dvh - 150px);width:auto;height:auto;border-radius:12px;transition:opacity .25s}
+.lb p{color:#E2EAF2;margin-top:14px;text-align:center;max-width:60ch;font-size:.95rem}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(255,255,255,.26)}
+.lb-x{top:max(14px,env(safe-area-inset-top));right:14px}
+.lb-prev{left:10px;top:50%;margin-top:-24px}
+.lb-next{right:10px;top:50%;margin-top:-24px}
+@media (max-width:600px){.lb-in{padding-left:12px;padding-right:12px}.lb-prev,.lb-next{top:auto;bottom:max(14px,env(safe-area-inset-bottom));margin:0}.lb img{max-height:calc(100dvh - 190px)}}
+
+/* clientes */
+.clientes{padding:clamp(64px,8vw,104px) 0;background:var(--gelo)}
+.clientes .lead{margin-top:14px}
+.marquee{margin-top:40px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;width:max-content}
+.grupo{display:flex;gap:18px;padding-right:18px;list-style:none;margin:0;padding-left:0}
+.logo-cli{flex:none;width:clamp(170px,20vw,230px);height:clamp(96px,10vw,120px);display:grid;place-items:center;padding:20px 26px;background:#fff;border-radius:var(--r-md);border:1px solid var(--geada)}
+.logo-cli img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+@media (prefers-reduced-motion:no-preference){
+ .track{animation:esteira 34s linear infinite}
+ .marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
+}
+@media (prefers-reduced-motion:reduce){.marquee{mask-image:none;-webkit-mask-image:none}.track{width:auto;display:block}.grupo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;padding:0 clamp(18px,4vw,40px);max-width:1180px;margin:0 auto}.grupo .logo-cli{width:auto}.grupo[aria-hidden="true"]{display:none}}
+@keyframes esteira{to{transform:translate3d(-50%,0,0)}}
+
+
+/* depoimento */
+.depo{margin-top:clamp(44px,6vw,72px);display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(20px,3.4vw,40px);border-radius:32px;background:#fff;border:1px solid var(--geada);box-shadow:0 30px 60px -40px rgba(15,39,66,.45)}
+.vframe-marinho{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(150deg,#23467A,#2E8FD1) border-box;box-shadow:0 30px 60px -28px rgba(35,70,122,.55),0 8px 18px -12px rgba(15,39,66,.25)}
+.vframe-marinho .vselo{color:var(--marinho)}
+.vframe-marinho figcaption svg{background:var(--gelo);color:var(--marinho)}
+.vplay-grande span{width:78px;height:78px}
+.vplay-grande span::before{border-left-color:var(--marinho);border-left-width:22px;border-top-width:13px;border-bottom-width:13px}
+@media (prefers-reduced-motion:no-preference){.vplay-grande span{animation:pulso 2.2s ease-out infinite}}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7),0 10px 24px -8px rgba(15,39,66,.5)}70%{box-shadow:0 0 0 18px rgba(255,255,255,0),0 10px 24px -8px rgba(15,39,66,.5)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0),0 10px 24px -8px rgba(15,39,66,.5)}}
+.depo-logo{height:34px;width:auto;margin-bottom:24px}
+.depo-eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F74B0;margin-bottom:10px}
+.depo h3{font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.08;margin-bottom:16px}
+.depo-txt p{color:var(--suave);max-width:46ch}
+.depo-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.depo-ctas .btn svg{width:18px;height:18px}
+@media (max-width:820px){.depo{grid-template-columns:1fr}.depo-video{max-width:360px;width:100%;justify-self:center}}
+
+/* formulários */
+.orcamento{background:var(--marinho);color:#fff;padding:clamp(64px,9vw,120px) 0}
+.orc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start}
+.orcamento h2{color:#fff}
+.orcamento .lead{color:#C9D8EA;margin-top:16px}
+.orc-alt{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);color:#C9D8EA}
+.orc-alt .btn{margin-top:14px}
+.orc-ig{margin-top:18px}
+.orc-ig a{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600}
+.orc-ig svg{width:20px;height:20px}
+@media (max-width:900px){.orc-grid{grid-template-columns:1fr}}
+.form{background:#fff;color:var(--texto);border-radius:var(--r-lg);padding:clamp(22px,3.4vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.form .full{grid-column:1/-1}
+@media (max-width:600px){.form{grid-template-columns:1fr}}
+.field label,.field legend{display:block;font-weight:620;font-size:.93rem;color:var(--tinta);margin-bottom:6px}
+.field .opt{font-weight:400;color:var(--suave)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--tinta);background:#fff;border:1.5px solid var(--geada);border-radius:var(--r-sm);padding:12px 14px;min-height:50px;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--ar);box-shadow:0 0 0 4px rgba(46,143,209,.18)}
+.field [aria-invalid="true"]{border-color:var(--erro)}
+.field .err{color:var(--erro);font-size:.85rem;margin-top:5px;min-height:0}
+.field .err:empty{display:none}
+.field[hidden],.hint[hidden]{display:none}
+.field input[type=file]{padding:10px;min-height:auto}
+.hint{font-size:.82rem;color:var(--suave);margin-top:5px}
+.field label.check{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;font-weight:400;color:var(--texto);margin:0}
+.check input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--marinho)}
+.check button{font:inherit;color:var(--marinho);text-decoration:underline;background:none;border:0;padding:0;cursor:pointer}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.form .btn[disabled]{opacity:.6;cursor:progress;transform:none}
+.status{font-size:.93rem;padding:12px 14px;border-radius:var(--r-sm)}
+.status:empty{display:none}
+.status.ok{background:#E7F6EC;color:#155C2E}
+.status.info{background:var(--gelo);color:var(--tinta)}
+.status.erro{background:#FDECEA;color:var(--erro)}
+.spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:girar .8s linear infinite;display:none}
+.enviando .spin{display:inline-block}
+@keyframes girar{to{transform:rotate(360deg)}}
+.trabalhe{padding:clamp(64px,9vw,120px) 0;background:#fff}
+.trab-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.trabalhe .form{border:1px solid var(--geada);background:var(--gelo)}
+.trabalhe .lead{margin-top:16px}
+.trab-email{margin-top:14px;color:var(--suave)}
+.trab-email a{font-weight:600;overflow-wrap:anywhere}
+.trab-foto{margin-top:28px;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3}
+.trab-foto img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.trab-grid{grid-template-columns:1fr}}
+
+/* rodapé */
+.rodape{background:var(--gelo);border-top:1px solid var(--geada);padding:clamp(52px,7vw,80px) 0 calc(28px + 80px)}
+.rod-grid{display:grid;grid-template-columns:1.25fr .8fr .9fr 1.35fr;gap:32px}
+.rod-grid img{height:46px;width:auto;margin-bottom:16px}
+.rod-grid h3{font-size:1rem;margin-bottom:12px}
+.sociais{display:flex;gap:10px;margin-top:18px}
+.sociais a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#fff;border:1px solid var(--geada);color:var(--marinho);transition:transform .2s,border-color .2s}
+.sociais a:hover{transform:translateY(-2px);border-color:var(--ar)}
+.sociais svg{width:22px;height:22px}
+.rod-grid a{overflow-wrap:anywhere}
+.rod-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.rod-grid a{text-decoration:none;color:var(--texto)}
+.rod-grid a:hover{color:var(--marinho);text-decoration:underline}
+.rod-grid p{font-size:.95rem;color:var(--suave)}
+.rod-base{margin-top:44px;padding-top:22px;border-top:1px solid var(--geada);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.88rem;color:var(--suave)}
+.rod-base button{font:inherit;color:var(--marinho);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+@media (max-width:900px){.rod-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.rod-grid{grid-template-columns:1fr}}
+
+/* privacidade */
+.priv{border:0;border-radius:var(--r-lg);padding:0;max-width:640px;width:calc(100% - 32px);max-height:85dvh}
+.priv::backdrop{background:rgba(10,24,40,.6)}
+.priv-in{padding:28px clamp(20px,4vw,36px) 32px}
+.priv h2{font-size:1.6rem;margin-bottom:14px}
+.priv h3{font-size:1rem;margin:18px 0 6px}
+.priv p{font-size:.95rem;color:var(--texto)}
+.priv .btn{margin-top:22px}
+
+/* whatsapp flutuante */
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(7,59,29,.6);text-decoration:none;transition:transform .2s}
+.wa-float svg{width:32px;height:32px}
+.wa-float:hover{transform:scale(1.07)}
+.wa-tip{position:absolute;right:72px;top:50%;transform:translateY(-50%) translateX(6px);white-space:nowrap;background:var(--tinta);color:#fff;font-size:.88rem;font-weight:550;padding:8px 12px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+@media (hover:hover){.wa-float:hover .wa-tip,.wa-float:focus-visible .wa-tip{opacity:1;transform:translateY(-50%)}}
+@media (prefers-reduced-motion:no-preference){.wa-float{animation:entrar .5s 1.2s both cubic-bezier(.2,.8,.3,1.2)}}
+@keyframes entrar{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+
+/* neve do cursor */
+#neve-cursor{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:80}
+
+/* revelação */
+@media (prefers-reduced-motion:no-preference){
+ .js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+ .js .rv.in{opacity:1;transform:none}
+}
+
+/* ===== refinamento de quebras de texto (todas as telas) ===== */
+h1,h2,h3,h4,.lead,figcaption,.depo h3,.passagem-txt .big{text-wrap:balance}
+p,li,.card p,.passo p,.door span{text-wrap:pretty}
+.nw{white-space:nowrap}
+.ig-handle{display:block;font-weight:500;color:var(--suave);font-size:.92rem;overflow-wrap:anywhere}
+.email-bloco{display:inline-block;overflow-wrap:anywhere}
+.subhead a{display:inline-flex;align-items:center;min-height:44px}
+.rod-base button,.rod-grid button{min-height:40px}
+.check button{padding:0}
+.vselo{font-size:max(.68rem,11px)}
+.gal-mais{display:flex;justify-content:center;margin-top:8px}
+.gal-mais[hidden]{display:none}
+
+/* ===== tablet ===== */
+@media (min-width:601px) and (max-width:900px){
+ .masonry{columns:2}
+ .ba-box{aspect-ratio:1/1}
+ .depo{grid-template-columns:240px 1fr}
+ .hero-foto{aspect-ratio:16/10;max-height:none}
+ .hero-media::before{inset:8% -3% -5% 30%}
+ .doors{max-width:none}
+ .intro{grid-template-columns:1fr 1fr;gap:28px}
+ .intro-photo{aspect-ratio:4/5}
+ .vduo{max-width:540px}
+ .hig-intro{justify-items:start}
+ .rod-grid{gap:28px 24px}
+}
+
+/* ===== celular ===== */
+@media (max-width:600px){
+ body{font-size:1rem}
+ .wrap{padding:0 18px}
+
+ /* início */
+ .hero{padding-top:calc(var(--hdr) + 20px);padding-bottom:44px}
+ .hero-logo{display:none}
+ .hero h1{font-size:clamp(2.05rem,9.4vw,2.6rem);line-height:1.06}
+ .hero .lead{margin-top:16px;font-size:1.02rem}
+ .hero-ctas{margin-top:24px;gap:10px}
+ .hero-ctas .btn{flex:1 1 100%}
+ .doors{margin-top:22px;gap:10px;grid-template-columns:1fr 1fr}
+ .door{flex-direction:column;gap:8px;padding:14px}
+ .door svg{width:22px;height:22px;margin:0}
+ .door b{font-size:.95rem}
+ .door span{font-size:.8rem;line-height:1.35}
+ .hero-grid{gap:32px}
+ .hero-foto{aspect-ratio:1/1;border-radius:24px}
+ .hero-media::before{display:none}
+ .hero-media .flake-mark{width:180px;height:180px;left:auto;right:-60px;top:-70px}
+ .chip{padding:8px 12px 8px 8px;gap:9px;border-radius:13px;max-width:calc(100% - 24px)}
+ .chip .ci{width:32px;height:32px;border-radius:9px}
+ .chip .ci svg{width:18px;height:18px}
+ .chip b{font-size:.84rem}
+ .chip-a span:last-child{font-size:.78rem}
+
+ /* cabeçalho das áreas */
+ .area{padding:56px 0}
+ .area-top{gap:0;padding-bottom:22px;margin-bottom:28px}
+ .area-top .alogo{height:30px;margin-bottom:12px}
+ .area-top h2 .big{font-size:clamp(2.4rem,11vw,3rem)}
+ .area-top h2 .rest{font-size:1.2rem;margin-top:6px}
+ .area-top .lead{margin-top:12px}
+ .area-top .switch{display:none}
+
+ /* climatização */
+ .intro{gap:20px;margin-bottom:32px}
+ .intro-photo{aspect-ratio:16/10}
+ .intro .ticks{margin:16px 0 22px}
+ .intro .btn,.hig-intro .btn{width:100%}
+
+ /* cards compactos: ícone ao lado do texto */
+ .cards{gap:10px}
+ .card{display:grid;grid-template-columns:44px 1fr;column-gap:14px;align-items:start;padding:16px}
+ .card-ic{grid-row:span 2;width:44px;height:44px;border-radius:12px;margin:0}
+ .card-ic svg{width:22px;height:22px}
+ .card h3{font-size:1.02rem;margin:2px 0 4px}
+ .card p{font-size:.9rem;line-height:1.5}
+ .card:hover{transform:none}
+
+ .subhead{margin:40px 0 14px;gap:0 12px;align-items:center}
+ .subhead h3{font-size:1.3rem}
+ .subhead a{font-size:.92rem}
+ .mini{gap:8px}
+ .mini-item{aspect-ratio:1/1;border-radius:14px}
+ .area-cta{flex-direction:column;align-items:stretch;gap:14px;padding:20px;margin-top:32px}
+ .area-cta p{font-size:1.05rem}
+ .area-cta .btn{width:100%}
+
+ /* transição */
+ .passagem{padding:76px 0}
+
+ /* higienização */
+ .hig-intro{gap:28px;margin-bottom:32px}
+ .vduo{gap:10px}
+ .vduo .desce{margin-top:22px}
+ .passos{gap:10px}
+ .passo{display:grid;grid-template-columns:104px 1fr;align-items:stretch}
+ .passo-img{aspect-ratio:auto;height:100%;min-height:112px}
+ .passo div.t{padding:14px 14px 14px 16px;align-self:center}
+ .passo h4{font-size:.98rem;margin-bottom:4px}
+ .passo h4::before{width:22px;height:22px;font-size:.75rem}
+ .passo p{font-size:.88rem;line-height:1.45}
+
+ /* galeria */
+ .galeria{padding:56px 0}
+ .ba-grid{gap:26px;margin:28px 0 36px}
+ .ba-box{aspect-ratio:1/1;border-radius:20px}
+ .ba figcaption{font-size:.92rem}
+ .filtros{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+ .filtros button{padding:10px 4px;font-size:.86rem;min-height:44px}
+ .masonry{columns:2;column-gap:8px}
+ .g-item{margin-bottom:8px;border-radius:12px}
+ .g-item .tag{left:6px;bottom:6px;padding:3px 8px;font-size:.75rem}
+ .ig-cta{flex-direction:column;align-items:stretch;padding:20px;gap:14px}
+ .ig-cta .btn{justify-content:center;width:100%}
+
+ /* clientes e depoimento */
+ .clientes{padding:56px 0}
+ .marquee{margin-top:28px}
+ .logo-cli{width:150px;height:84px;padding:14px 18px}
+ .depo{margin-top:36px;padding:18px;gap:24px;border-radius:24px}
+ .depo-video{max-width:250px}
+ .depo-logo{height:28px;margin-bottom:16px}
+ .depo h3{font-size:1.55rem}
+ .depo-ctas{margin-top:22px;gap:10px}
+ .depo-ctas .btn{flex:1 1 100%}
+
+ /* formulários */
+ .orcamento,.trabalhe{padding:56px 0}
+ .orc-grid,.trab-grid{gap:28px}
+ .orc-alt{margin-top:22px;padding-top:20px}
+ .orc-alt .btn{width:100%}
+ .form{padding:20px;gap:14px;border-radius:22px}
+ .form .btn[type=submit]{width:100%}
+ .field input,.field select,.field textarea{font-size:16px}
+ .field label.check{gap:12px;padding:4px 0}
+ .field label.check input{width:24px;height:24px;margin-top:0}
+ .trab-foto{aspect-ratio:16/9;margin-top:20px}
+
+ /* rodapé */
+ .rodape{padding-top:44px}
+ .rod-grid{grid-template-columns:1fr 1fr;gap:28px 18px}
+ .rod-grid>div:first-child,.rod-grid>div:last-child{grid-column:1/-1}
+ .rod-grid h3{margin-bottom:8px}
+ .rod-grid ul{gap:2px}
+ .rod-grid li a,.rod-grid li button{display:inline-flex;align-items:center;min-height:40px}
+ .rod-base{margin-top:28px;flex-direction:column;align-items:flex-start;gap:6px}
+ .rod-grid button{text-align:left}
+}
+
+/* telas bem estreitas */
+@media (max-width:370px){
+ .doors{grid-template-columns:1fr}
+ .door{flex-direction:row;align-items:center}
+ .filtros button{font-size:.8rem}
+ .passo{grid-template-columns:88px 1fr}
+}
+
+</style>
+<script>
+(function(){
+ var r=document.documentElement; r.classList.add('js');
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add('hero-go');return}
+ r.classList.add('intro-on');
+ function sai(){
+  if(r.classList.contains('hero-go'))return;
+  r.classList.add('intro-sai','hero-go');
+  setTimeout(function(){r.classList.remove('intro-on','intro-sai')},900);
+ }
+ setTimeout(sai,1700);
+ addEventListener('keydown',sai,{once:true});
+ addEventListener('pointerdown',sai,{once:true});
+})();
+</script>
+</head>
+<body>
+<div class="abertura" aria-hidden="true"><div class="intro-in"><img src="assets/logo-ts.webp" width="900" height="240" alt="" class="intro-logo"><span class="intro-barra"><i></i></span><p class="intro-txt">Climatização · Higienização</p></div></div>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="hdr" id="hdr">
+ <div class="wrap hdr-in">
+  <a class="hdr-logo" href="#inicio" aria-label="TS Refrigeração, voltar ao início"><img src="assets/logo-ts.webp" width="900" height="240" alt="TS Refrigeração e Climatização" loading="eager"></a>
+  <nav class="nav" aria-label="Principal">
+   <a href="#inicio">Início</a><a href="#climatizacao">Climatização</a><a href="#higienizacao">Limpeza Industrial</a><a href="#galeria">Galeria</a><a href="#clientes">Clientes</a><a href="#trabalhe">Trabalhe Conosco</a>
+  </nav>
+  <a class="btn btn-pri" href="#orcamento">Solicitar orçamento</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><span></span></button>
+  <nav class="mnav" id="mnav" aria-label="Menu móvel">
+   <a href="#inicio">Início</a><a href="#climatizacao">Climatização</a><a href="#higienizacao">Limpeza Industrial</a><a href="#galeria">Galeria</a><a href="#clientes">Clientes</a><a href="#trabalhe">Trabalhe Conosco</a>
+   <a class="btn btn-pri" href="#orcamento">Solicitar orçamento</a>
+  </nav>
+ </div>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="inicio" aria-labelledby="h-hero">
+ <div class="hero-neve" aria-hidden="true"></div>
+ <div class="wrap hero-grid">
+  <div>
+   <img src="assets/logo-ts.webp" width="900" height="240" alt="TS Refrigeração e Climatização" class="hero-logo h-a" style="--hd:.3s" fetchpriority="high">
+   <h1 id="h-hero"><span class="w"><span style="--i:0" class="c-ar">Climatização</span></span> <span class="w"><span style="--i:1">e</span></span> <span class="w"><span style="--i:2" class="c-agua">higienização</span></span> <span class="w"><span style="--i:3">com</span></span> <span class="w"><span style="--i:4">qualidade</span></span> <span class="w"><span style="--i:5">e</span></span> <span class="w"><span style="--i:6">confiança.</span></span></h1>
+   <p class="lead h-a" style="--hd:.9s">Soluções em climatização e higienização de equipamentos para ambientes mais confortáveis, limpos e bem cuidados.</p>
+   <div class="hero-ctas h-a" style="--hd:1s">
+    <a class="btn btn-pri" href="#orcamento">Solicitar orçamento</a>
+    <a class="btn btn-sec" href="#climatizacao">Conheça nossos serviços</a>
+   </div>
+   <div class="doors">
+    <a class="door h-a" style="--hd:1.12s" href="#climatizacao"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M32 4v56M7.8 18l48.4 28M7.8 46l48.4-28"/></svg><div><b>Climatização</b><span>Ar-condicionado residencial, comercial e industrial</span></div></a>
+    <a class="door agua h-a" style="--hd:1.22s" href="#higienizacao"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 9.3 6 14a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></svg><div><b>Higienização</b><span>Bebedouros, geláguas e equipamentos industriais</span></div></a>
+   </div>
+  </div>
+  <div class="hero-media">
+   <svg class="flake-mark" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M32 4v56M7.8 18l48.4 28M7.8 46l48.4-28"/><path d="M26 9l6 6 6-6M26 55l6-6 6 6M9 25l8-2-2-8M55 39l-8 2 2 8M9 39l8 2-2 8M55 25l-8-2 2-8"/></svg>
+   <figure class="hero-foto"><img src="assets/img/hero-tecnico-teto.webp" width="1086" height="1448" alt="Técnico de uniforme da TS ajustando a grade de um ar-condicionado de teto" fetchpriority="high" decoding="async"></figure>
+   <div class="chip chip-a h-a" style="--hd:1.3s"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10"/></svg></span><span><b>Fortaleza e região</b>Residencial, comercial e industrial</span></div>
+   <a class="chip chip-b h-a" style="--hd:1.45s" href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento com a TS Refrigeração."><span class="ci"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg></span><span><b>Orçamento pelo WhatsApp</b>(85) 98534-1851</span></a>
+  </div>
+ </div>
+ <a class="rolar h-a" style="--hd:1.7s" href="#climatizacao" aria-label="Rolar até os serviços"><span></span></a>
+</section>
+
+<section class="area clima" id="climatizacao" aria-labelledby="h-clima">
+ <div class="sopro" aria-hidden="true">
+  <svg class="vento" viewBox="0 0 1440 300" preserveAspectRatio="none">
+   <path pathLength="1" d="M-20 120c180-40 320 30 520 0s360-60 560-10 260 40 400 20"/>
+   <path pathLength="1" d="M-20 170c220-30 380 40 600 10s340-50 520-10 200 30 360 10"/>
+   <path pathLength="1" d="M-20 225c160-20 300 30 480 10s360-40 560 0 260 20 420 0"/>
+  </svg>
+  <span class="floco"><svg viewBox="0 0 64 64" fill="none" stroke="#2E8FD1" stroke-width="3" stroke-linecap="round"><path d="M32 4v56M7.8 18l48.4 28M7.8 46l48.4-28"/><path d="M26 9l6 6 6-6M26 55l6-6 6 6M9 25l8-2-2-8M55 39l-8 2 2 8M9 39l8 2-2 8M55 25l-8-2 2-8"/></svg></span>
+  <div class="cristais"></div>
+ </div>
+ <div class="wrap">
+  <div class="area-top">
+   <div>
+    <img src="assets/logo-ts.webp" width="900" height="240" alt="TS Refrigeração e Climatização" class="alogo" loading="lazy">
+    <h2 id="h-clima"><span class="big">Climatização</span></h2>
+    <p class="lead">Instalação, manutenção e limpeza de ar-condicionado para casas, comércios, empresas e indústrias.</p>
+   </div>
+   <a class="switch" href="#higienizacao">Ir para higienização</a>
+  </div>
+  <div class="intro">
+   <div class="intro-photo rv"><img src="assets/img/medicao-temperatura-split.webp" width="750" height="1000" alt="Técnico medindo a temperatura do ar na saída de um split com termômetro infravermelho" loading="lazy" decoding="async"></div>
+   <div class="rv" style="--d:.1s">
+    <h3>Ar-condicionado funcionando como deve</h3>
+    <p>A gente avalia o equipamento antes de executar qualquer serviço e informa as condições antes da contratação. O trabalho segue o diagnóstico, com orientação adequada ao seu aparelho e ao seu ambiente.</p>
+    <ul class="ticks">
+     <li>Casas e apartamentos</li><li>Escritórios, lojas e clínicas</li><li>Empresas e indústrias</li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20climatiza%C3%A7%C3%A3o%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento de climatização com a TS Refrigeração."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>Orçamento pelo WhatsApp</a>
+   </div>
+  </div>
+  <div class="cards"><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.3 19a9 9 0 1 1 17.4 0"/></svg></span><h3>Instalação de <span class="nw">ar-condicionado</span></h3><p>Instalação completa, com materiais de qualidade, segurança e atenção às especificações do&nbsp;fabricante.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Manutenção&nbsp;preventiva</h3><p>Verificação e cuidados periódicos para reduzir o risco de falhas e manter o equipamento funcionando&nbsp;bem.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><h3>Manutenção&nbsp;corretiva</h3><p>Diagnóstico de falhas, vazamentos e problemas de funcionamento. Reparos e recarga de fluido só após&nbsp;avaliação.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.6L12 15l-1.8-4.4L5.5 9l4.7-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><h3>Limpeza e&nbsp;higienização</h3><p>Lavagem de turbina, serpentina e filtros para um ar mais limpo e um equipamento mais&nbsp;eficiente.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01M10 21v-3h4v3"/></svg></span><h3>Atendimento comercial e&nbsp;industrial</h3><p>Escritórios, lojas, clínicas, empresas e indústrias, além de casas e&nbsp;apartamentos.</p></article></div>
+  <div class="subhead rv"><h3>Instalações e manutenções</h3><a href="#galeria" data-filtro-link="clima">Ver galeria de climatização</a></div>
+  <div class="mini rv"><button type="button" class="mini-item" data-lb="condensadoras-telhado-1" aria-label="Ampliar: Condensadoras de ar-condicionado instaladas em sequência na cobertura de um prédio"><img src="assets/img/condensadoras-telhado-1.webp" width="562" height="1000" alt="Condensadoras de ar-condicionado instaladas em sequência na cobertura de um prédio" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="filtro-split-limpo" aria-label="Ampliar: Filtro de split sendo recolocado após a limpeza"><img src="assets/img/filtro-split-limpo.webp" width="750" height="1000" alt="Filtro de split sendo recolocado após a limpeza" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="split-instalado-2" aria-label="Ampliar: Split instalado no alto da parede de uma sala"><img src="assets/img/split-instalado-2.webp" width="750" height="1000" alt="Split instalado no alto da parede de uma sala" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="condensadoras-telhado-2" aria-label="Ampliar: Fileira de condensadoras na cobertura, vista lateral"><img src="assets/img/condensadoras-telhado-2.webp" width="750" height="1000" alt="Fileira de condensadoras na cobertura, vista lateral" loading="lazy" decoding="async"></button></div>
+ </div>
+</section>
+
+<section class="passagem" aria-label="Da climatização à higienização">
+ <svg class="onda top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0 0h1440v34c-180 30-360 44-540 30S540 18 360 22 120 52 0 46z"/></svg>
+ <svg class="fluxo" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+  <path stroke="#5DB3EA" d="M-40 150c220-60 420 40 640 0s420-70 620-10 220 40 260 30"/>
+  <path stroke="#5DB3EA" d="M-40 220c260-50 460 50 700 10s400-80 600-20 160 30 220 20" style="animation-delay:-2s"/>
+  <path stroke="#8FD6D2" d="M-40 330c200 40 380-30 560 0s380 60 560 10 260-40 400-10" style="animation-delay:-4s"/>
+  <path stroke="#8FD6D2" d="M-40 400c240 30 420-40 640-10s360 50 560 0 180-20 280 0" style="animation-delay:-1s"/>
+ </svg>
+ <div class="neve" aria-hidden="true"></div>
+ <div class="wrap passagem-txt rv">
+  <p class="big">Do ar que você respira<span>à água que você bebe.</span></p>
+  <p class="small">A mesma equipe que cuida da sua climatização também higieniza bebedouros, geláguas e equipamentos industriais.</p>
+ </div>
+ <svg class="onda bot bot2" viewBox="0 0 2880 104" preserveAspectRatio="none" aria-hidden="true"><path fill="#E6F4F2" d="M0 104V52c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0 240-30 360 0 240 30 360 0 240-30 360 0 240 30 360 0v52z"/></svg>
+ <svg class="onda bot" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#E6F4F2" d="M0 80h1440V40c-160-34-340-40-520-18S560 70 380 60 120 20 0 30z"/></svg>
+</section>
+
+<section class="area hig" id="higienizacao" aria-labelledby="h-hig">
+ <div class="splash" aria-hidden="true">
+  <span class="gota"><svg viewBox="0 0 24 32"><path d="M12 1C12 1 3 13 3 20a9 9 0 0 0 18 0C21 13 12 1 12 1z" fill="#0E7C79"/><path d="M8 20a4 4 0 0 0 4 4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>
+  <span class="anel"></span><span class="anel"></span><span class="anel"></span>
+  <div class="bolhas"></div>
+ </div>
+ <div class="wrap">
+  <div class="area-top">
+   <div>
+    <img src="assets/logo-ts.webp" width="900" height="240" alt="TS Refrigeração e Climatização" class="alogo" loading="lazy">
+    <h2 id="h-hig"><span class="big">Higienização</span> <span class="rest">de bebedouros e equipamentos industriais</span></h2>
+    <p class="lead">Mais cuidado com seus equipamentos, mais atenção à higiene e à qualidade dos ambientes.</p>
+   </div>
+   <a class="switch" href="#climatizacao">Ir para climatização</a>
+  </div>
+  <div class="hig-intro">
+   <div class="vduo">
+   <figure class="vframe rv" style="--d:0s">
+    <div class="vtela"><span class="vselo"><i></i>Vídeo real</span>
+    <video muted loop playsinline preload="none" width="640" height="1148" poster="assets/video/bebedouro-2.webp" aria-label="Técnico da TS higienizando o reservatório de um bebedouro">
+     <source src="assets/video/bebedouro-2.webm" type="video/webm"><source src="assets/video/bebedouro-2.mp4" type="video/mp4">
+    </video>
+    <button class="vplay" type="button" aria-label="Reproduzir vídeo: higienização do reservatório" hidden><span></span></button></div>
+    <figcaption><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg>Higienização do reservatório</figcaption>
+   </figure>
+   <figure class="vframe rv desce" style="--d:.15s">
+    <div class="vtela"><span class="vselo"><i></i>Vídeo real</span>
+    <video muted loop playsinline preload="none" width="640" height="1148" poster="assets/video/bebedouro-1.webp" aria-label="Técnico limpando a parte externa de um bebedouro de inox">
+     <source src="assets/video/bebedouro-1.webm" type="video/webm"><source src="assets/video/bebedouro-1.mp4" type="video/mp4">
+    </video>
+    <button class="vplay" type="button" aria-label="Reproduzir vídeo: limpeza externa e das torneiras" hidden><span></span></button></div>
+    <figcaption><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg>Limpeza externa e das torneiras</figcaption>
+   </figure>
+  </div>
+   <div class="rv" style="--d:.1s">
+    <h3 style="font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:14px">Água de bebedouro passa por um equipamento que também precisa de limpeza</h3>
+    <p>Reservatório, serpentina, torneiras e filtro acumulam resíduos com o uso. A TS desmonta, limpa por dentro, troca o filtro e devolve o equipamento pronto para uso, em empresas, comércios e indústrias.</p>
+    <ul class="ticks"><li>Bebedouros de pressão e de inox</li><li>Geláguas e purificadores com filtro</li><li>Equipamentos industriais de água</li></ul>
+    <a class="btn btn-agua" href="#orcamento" data-servico="Higienização de bebedouros e gelágua">Solicitar orçamento</a>
+   </div>
+  </div>
+  <div class="cards"><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 13v2M15 13v2"/></svg></span><h3>Bebedouros</h3><p>Higienização do reservatório, da serpentina interna e das torneiras de bebedouros de pressão e de&nbsp;inox.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 9.3 6 14a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></svg></span><h3>Geláguas e&nbsp;purificadores</h3><p>Limpeza do equipamento e troca do filtro, com etiqueta indicando a data da última&nbsp;troca.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="5" rx="1"/><path d="M8 7v11a4 4 0 0 0 8 0V7"/><path d="M11 11v6M13 11v6"/></svg></span><h3>Filtros e&nbsp;refis</h3><p>Substituição de refis e elementos filtrantes conforme o modelo do&nbsp;equipamento.</p></article><article class="card rv"><span class="card-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21V10l6 4V10l6 4V6l8 4v11z"/><path d="M6 17h2M11 17h2M16 17h2"/></svg></span><h3>Equipamentos&nbsp;industriais</h3><p>Limpeza química por circulação em trocadores e equipamentos de água, com equipe usando&nbsp;EPI.</p></article></div>
+  <div class="subhead rv"><h3>Como fazemos a higienização</h3></div>
+  <ol class="passos"><li class="passo rv" style="--d:0.00s"><div class="passo-img"><img src="assets/img/reservatorio-sujo.webp" width="750" height="1000" alt="Reservatório de bebedouro com resíduos e água amarelada antes da higienização" loading="lazy" decoding="async"></div><div class="t"><h4>Inspeção</h4><p>Abrimos o equipamento e avaliamos o estado do reservatório e dos&nbsp;componentes.</p></div></li><li class="passo rv" style="--d:0.08s"><div class="passo-img"><img src="assets/img/bebedouro-serpentina-reservatorio.webp" width="1000" height="750" alt="Serpentina interna exposta no reservatório de um bebedouro durante a higienização" loading="lazy" decoding="async"></div><div class="t"><h4>Limpeza interna</h4><p>Reservatório e serpentina são limpos e enxaguados por&nbsp;dentro.</p></div></li><li class="passo rv" style="--d:0.16s"><div class="passo-img"><img src="assets/img/filtro-3m-troca.webp" width="750" height="1000" alt="Filtro 3M instalado com etiqueta da TS indicando a data da troca" loading="lazy" decoding="async"></div><div class="t"><h4>Troca do filtro</h4><p>O filtro ou refil é substituído e identificado com a data da&nbsp;troca.</p></div></li><li class="passo rv" style="--d:0.24s"><div class="passo-img"><img src="assets/img/bebedouro-inox.webp" width="750" height="1000" alt="Bebedouro de inox com torneiras de água gelada e natural" loading="lazy" decoding="async"></div><div class="t"><h4>Equipamento liberado</h4><p>O bebedouro é remontado e testado antes de voltar ao&nbsp;uso.</p></div></li></ol>
+  <div class="subhead rv"><h3>Atendimento industrial</h3><a href="#galeria" data-filtro-link="hig">Ver galeria de higienização</a></div>
+  <div class="mini rv"><button type="button" class="mini-item" data-lb="limpeza-trocador-industrial" aria-label="Ampliar: Limpeza química de trocador de calor industrial com circulação a partir de tanque"><img src="assets/img/limpeza-trocador-industrial.webp" width="1000" height="750" alt="Limpeza química de trocador de calor industrial com circulação a partir de tanque" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="tecnico-epi-industrial-1" aria-label="Ampliar: Técnico com traje de proteção e respirador trabalhando em equipamento industrial"><img src="assets/img/tecnico-epi-industrial-1.webp" width="562" height="1000" alt="Técnico com traje de proteção e respirador trabalhando em equipamento industrial" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="filtro-industrial" aria-label="Ampliar: Elemento filtrante metálico de equipamento industrial durante a manutenção"><img src="assets/img/filtro-industrial.webp" width="750" height="1000" alt="Elemento filtrante metálico de equipamento industrial durante a manutenção" loading="lazy" decoding="async"></button><button type="button" class="mini-item" data-lb="tecnico-area-industrial" aria-label="Ampliar: Técnico da TS com maletas de ferramentas em área industrial"><img src="assets/img/tecnico-area-industrial.webp" width="750" height="1000" alt="Técnico da TS com maletas de ferramentas em área industrial" loading="lazy" decoding="async"></button></div>
+  <div class="area-cta rv">
+   <p>Sua empresa ou indústria precisa de higienização periódica dos equipamentos de água?</p>
+   <a class="btn btn-wa" href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20higieniza%C3%A7%C3%A3o%20de%20bebedouros/equipamentos%20para%20minha%20empresa." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento de higienização de bebedouros/equipamentos para minha empresa."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>Falar com a equipe</a>
+  </div>
+ </div>
+</section>
+
+<section class="equipe" id="equipe" aria-labelledby="h-equipe">
+ <div class="wrap">
+  <div class="equipe-top rv">
+   <h2 id="h-equipe">Nossa equipe em campo</h2>
+   <p class="lead">Uniforme, equipamento de proteção e cuidado em cada atendimento, do bebedouro do escritório ao equipamento da indústria.</p>
+  </div>
+  <div class="equipe-grid">
+   <figure class="eq-foto eq-larga rv">
+    <img src="assets/img/equipe-industrial-campo.webp" width="1200" height="1024" alt="Técnico de uniforme, capacete e protetor auricular trabalhando em equipamento de refrigeração industrial" loading="lazy" decoding="async">
+    <figcaption><span class="eq-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10"/></svg></span>Climatização industrial</figcaption>
+   </figure>
+   <figure class="eq-foto eq-alta rv" style="--d:.12s">
+    <img src="assets/img/equipe-bebedouro.webp" width="933" height="1400" alt="Técnico de uniforme da TS, touca e máscara limpando a cuba de um bebedouro de inox" loading="lazy" decoding="async">
+    <figcaption class="eq-agua"><span class="eq-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 9.3 6 14a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></svg></span>Higienização de bebedouros</figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<section class="galeria" id="galeria" aria-labelledby="h-gal">
+ <div class="wrap">
+  <div class="rv"><h2 id="h-gal">Resultados que você pode ver</h2>
+  <p class="lead">Conheça alguns dos serviços realizados pela TS Refrigeração.</p></div>
+  <div class="ba-grid">
+  <div class="ba rv" style="--d:0.0s"><figure>
+   <div class="ba-box">
+    <img src="assets/img/turbina-depois.webp" width="750" height="1000" alt="Turbina de ar-condicionado limpa após a lavagem" loading="lazy" decoding="async">
+    <img src="assets/img/turbina-antes.webp" width="750" height="1000" alt="Turbina de ar-condicionado coberta de sujeira antes da limpeza" loading="lazy" decoding="async" class="antes">
+    <span class="ba-tag a">ANTES</span><span class="ba-tag d">DEPOIS</span>
+    <span class="ba-line"></span>
+    <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: turbina do ar-condicionado" aria-valuetext="50% antes">
+    <span class="ba-knob"></span>
+   </div>
+   <figcaption>Turbina do ar-condicionado: a mesma peça antes e depois da lavagem</figcaption></figure></div><div class="ba rv" style="--d:0.1s"><figure>
+   <div class="ba-box">
+    <img src="assets/img/serpentina-depois.webp" width="750" height="1000" alt="Serpentina de ar-condicionado limpa após a lavagem" loading="lazy" decoding="async">
+    <img src="assets/img/serpentina-antes.webp" width="750" height="1000" alt="Serpentina de ar-condicionado com sujeira acumulada antes da limpeza" loading="lazy" decoding="async" class="antes">
+    <span class="ba-tag a">ANTES</span><span class="ba-tag d">DEPOIS</span>
+    <span class="ba-line"></span>
+    <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: serpentina do ar-condicionado" aria-valuetext="50% antes">
+    <span class="ba-knob"></span>
+   </div>
+   <figcaption>Serpentina do ar-condicionado: a mesma peça antes e depois da lavagem</figcaption></figure></div>
+  </div>
+  <div class="filtros" role="group" aria-label="Filtrar galeria">
+   <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+   <button type="button" data-f="clima" aria-pressed="false">Climatização</button>
+   <button type="button" data-f="hig" aria-pressed="false">Higienização</button>
+  </div>
+  <p class="sr-only" id="gal-status" aria-live="polite"></p>
+  <div class="masonry" id="masonry">
+  <figure class="g-item" data-area="clima"><button type="button" data-lb="medicao-temperatura-split" aria-label="Ampliar: Técnico medindo a temperatura do ar na saída de um split com termômetro infravermelho"><img src="assets/img/medicao-temperatura-split.webp" width="750" height="1000" alt="Técnico medindo a temperatura do ar na saída de um split com termômetro infravermelho" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="clima"><button type="button" data-lb="condensadoras-telhado-1" aria-label="Ampliar: Condensadoras de ar-condicionado instaladas em sequência na cobertura de um prédio"><img src="assets/img/condensadoras-telhado-1.webp" width="562" height="1000" alt="Condensadoras de ar-condicionado instaladas em sequência na cobertura de um prédio" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="clima"><button type="button" data-lb="filtro-split-limpo" aria-label="Ampliar: Filtro de split sendo recolocado após a limpeza"><img src="assets/img/filtro-split-limpo.webp" width="750" height="1000" alt="Filtro de split sendo recolocado após a limpeza" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="clima"><button type="button" data-lb="split-instalado-1" aria-label="Ampliar: Split instalado na parede de um ambiente interno"><img src="assets/img/split-instalado-1.webp" width="750" height="1000" alt="Split instalado na parede de um ambiente interno" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="clima"><button type="button" data-lb="condensadoras-telhado-2" aria-label="Ampliar: Fileira de condensadoras na cobertura, vista lateral"><img src="assets/img/condensadoras-telhado-2.webp" width="750" height="1000" alt="Fileira de condensadoras na cobertura, vista lateral" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="clima"><button type="button" data-lb="split-instalado-2" aria-label="Ampliar: Split instalado no alto da parede de uma sala"><img src="assets/img/split-instalado-2.webp" width="750" height="1000" alt="Split instalado no alto da parede de uma sala" loading="lazy" decoding="async"></button><span class="tag">Climatização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="bebedouro-serpentina-reservatorio" aria-label="Ampliar: Serpentina interna exposta no reservatório de um bebedouro durante a higienização"><img src="assets/img/bebedouro-serpentina-reservatorio.webp" width="1000" height="750" alt="Serpentina interna exposta no reservatório de um bebedouro durante a higienização" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="filtro-3m-troca" aria-label="Ampliar: Filtro 3M instalado com etiqueta da TS indicando a data da troca"><img src="assets/img/filtro-3m-troca.webp" width="750" height="1000" alt="Filtro 3M instalado com etiqueta da TS indicando a data da troca" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="refil-filtro-agua" aria-label="Ampliar: Refil de filtro de água retirado durante a manutenção"><img src="assets/img/refil-filtro-agua.webp" width="750" height="1000" alt="Refil de filtro de água retirado durante a manutenção" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="bebedouro-inox" aria-label="Ampliar: Bebedouro de inox com torneiras de água gelada e natural"><img src="assets/img/bebedouro-inox.webp" width="750" height="1000" alt="Bebedouro de inox com torneiras de água gelada e natural" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="limpeza-trocador-industrial" aria-label="Ampliar: Limpeza química de trocador de calor industrial com circulação a partir de tanque"><img src="assets/img/limpeza-trocador-industrial.webp" width="1000" height="750" alt="Limpeza química de trocador de calor industrial com circulação a partir de tanque" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="tanque-ibc-industrial" aria-label="Ampliar: Técnico com traje de proteção operando tanque em área industrial"><img src="assets/img/tanque-ibc-industrial.webp" width="562" height="1000" alt="Técnico com traje de proteção operando tanque em área industrial" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="tecnico-epi-industrial-1" aria-label="Ampliar: Técnico com traje de proteção e respirador trabalhando em equipamento industrial"><img src="assets/img/tecnico-epi-industrial-1.webp" width="562" height="1000" alt="Técnico com traje de proteção e respirador trabalhando em equipamento industrial" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="equipe-industrial" aria-label="Ampliar: Equipe da TS com equipamentos de proteção em área industrial"><img src="assets/img/equipe-industrial.webp" width="1000" height="750" alt="Equipe da TS com equipamentos de proteção em área industrial" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="tecnico-epi-industrial-2" aria-label="Ampliar: Técnico com respirador executando limpeza de equipamento industrial"><img src="assets/img/tecnico-epi-industrial-2.webp" width="562" height="1000" alt="Técnico com respirador executando limpeza de equipamento industrial" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="filtro-industrial" aria-label="Ampliar: Elemento filtrante metálico de equipamento industrial durante a manutenção"><img src="assets/img/filtro-industrial.webp" width="750" height="1000" alt="Elemento filtrante metálico de equipamento industrial durante a manutenção" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="tecnico-area-industrial" aria-label="Ampliar: Técnico da TS com maletas de ferramentas em área industrial"><img src="assets/img/tecnico-area-industrial.webp" width="750" height="1000" alt="Técnico da TS com maletas de ferramentas em área industrial" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure><figure class="g-item" data-area="hig"><button type="button" data-lb="reservatorio-sujo" aria-label="Ampliar: Reservatório de bebedouro com resíduos e água amarelada antes da higienização"><img src="assets/img/reservatorio-sujo.webp" width="750" height="1000" alt="Reservatório de bebedouro com resíduos e água amarelada antes da higienização" loading="lazy" decoding="async"></button><span class="tag">Higienização</span></figure>
+  </div>
+  <div class="gal-mais" hidden><button class="btn btn-sec" type="button" id="gal-mais"></button></div>
+  <div class="ig-cta rv"><p>Acompanhe novos serviços no Instagram da TS <span class="ig-handle">@ts.refrigeracao_climatizacao</span></p><a class="btn btn-sec" href="https://www.instagram.com/ts.refrigeracao_climatizacao/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg>Seguir no Instagram</a></div>
+ </div>
+</section>
+
+<section class="clientes" id="clientes" aria-labelledby="h-cli">
+ <div class="wrap">
+  <div class="rv"><h2 id="h-cli">Empresas que confiam no nosso trabalho</h2>
+  <p class="lead">Algumas das empresas atendidas pela TS Refrigeração.</p></div>
+ </div>
+ <div class="marquee" tabindex="0" aria-label="Logos de clientes. Passe o mouse ou foque para pausar.">
+  <div class="track">
+   <ul class="grupo"><li class="logo-cli"><img src="assets/clientes/arcelormittal.svg" alt="ArcelorMittal" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/makro-engenharia-azul.webp" alt="Makro Engenharia" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/reframax-color.svg" alt="Reframax" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/inec.webp" alt="INEC" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/ecoban.webp" alt="Ecoban" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/north-shopping-joquei.webp" alt="North Shopping Jóquei" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/shinagawa.webp" alt="Shinagawa" decoding="async"></li></ul>
+   <ul class="grupo" aria-hidden="true"><li class="logo-cli"><img src="assets/clientes/arcelormittal.svg" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/makro-engenharia-azul.webp" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/reframax-color.svg" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/inec.webp" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/ecoban.webp" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/north-shopping-joquei.webp" alt="" decoding="async"></li><li class="logo-cli"><img src="assets/clientes/shinagawa.webp" alt="" decoding="async"></li></ul>
+  </div>
+ </div>
+ <div class="wrap">
+  <article class="depo rv" aria-labelledby="h-depo">
+   <figure class="vframe vframe-marinho depo-video">
+    <div class="vtela"><span class="vselo"><i></i>Depoimento</span>
+     <video data-som playsinline preload="none" width="720" height="1280" poster="assets/video/makro-feedback.webp" aria-label="Depoimento em vídeo da equipe da Makro Engenharia sobre o trabalho da TS Refrigeração">
+      <source src="assets/video/makro-feedback.mp4" type="video/mp4">
+     </video>
+     <button class="vplay vplay-grande" type="button" aria-label="Assistir ao depoimento da Makro Engenharia com som"><span></span></button>
+    </div>
+    <figcaption><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>Vídeo com som · 2 min</figcaption>
+   </figure>
+   <div class="depo-txt">
+    <img class="depo-logo" src="assets/clientes/makro-depoimento.webp" width="642" height="149" alt="Makro Engenharia" loading="lazy" decoding="async">
+    <span class="depo-eyebrow">Depoimento de cliente</span>
+    <h3 id="h-depo">Quem trabalha com a TS conta como é</h3>
+    <p>A equipe de obras e facilities da Makro Engenharia fala sobre o acompanhamento de manutenção preventiva e corretiva feito pela TS Refrigeração.</p>
+    <div class="depo-ctas">
+     <button class="btn btn-pri" type="button" data-depo-play><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg>Assistir ao depoimento</button>
+     <a class="btn btn-sec" href="#orcamento">Solicitar orçamento</a>
+    </div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<section class="orcamento" id="orcamento" aria-labelledby="h-orc">
+ <div class="wrap orc-grid">
+  <div class="rv">
+   <h2 id="h-orc">Precisa de uma solução em refrigeração?</h2>
+   <p class="lead">Conte um pouco sobre sua necessidade e nossa equipe poderá orientar você sobre o próximo passo.</p>
+   <div class="orc-alt">
+    <p>Prefere conversar direto? Atendemos pelo WhatsApp (85) 98534-1851.</p>
+    <p class="orc-ig"><a href="https://www.instagram.com/ts.refrigeracao_climatizacao/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg>Veja nossos trabalhos no Instagram</a></p>
+    <a class="btn btn-wa" href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento com a TS Refrigeração."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>Chamar no WhatsApp</a>
+   </div>
+  </div>
+  <form class="form rv" id="form-orc" novalidate>
+   <div class="field"><label for="o-nome">Nome</label><input id="o-nome" name="nome" autocomplete="name" required maxlength="80"><p class="err" id="o-nome-e"></p></div>
+   <div class="field"><label for="o-tel">Telefone ou WhatsApp</label><input id="o-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(85) 90000-0000"><p class="err" id="o-tel-e"></p></div>
+   <div class="field full"><label for="o-email">E-mail <span class="opt">(opcional)</span></label><input id="o-email" name="email" type="email" autocomplete="email" maxlength="120"><p class="err" id="o-email-e"></p></div>
+   <div class="field"><label for="o-serv">Tipo de serviço</label><select id="o-serv" name="servico" required>
+    <option value="">Selecione</option>
+    <optgroup label="Climatização"><option>Instalação de ar-condicionado</option><option>Manutenção preventiva</option><option>Manutenção corretiva</option><option>Limpeza e higienização de ar-condicionado</option></optgroup>
+    <optgroup label="Higienização"><option>Higienização de bebedouros e gelágua</option><option>Troca de filtro ou refil</option><option>Higienização de equipamento industrial</option></optgroup>
+    <option>Outro</option></select><p class="err" id="o-serv-e"></p></div>
+   <div class="field"><label for="o-tipo">Tipo de cliente</label><select id="o-tipo" name="cliente" required><option value="">Selecione</option><option>Residencial</option><option>Comercial</option><option>Industrial</option></select><p class="err" id="o-tipo-e"></p></div>
+   <div class="field full"><label for="o-desc">Descreva sua necessidade</label><textarea id="o-desc" name="descricao" required maxlength="1200" placeholder="Ex.: 3 splits de 12.000 BTUs para limpeza, em Fortaleza."></textarea><p class="err" id="o-desc-e"></p></div>
+   <div class="hp" aria-hidden="true"><label for="o-site">Não preencha</label><input id="o-site" name="site" tabindex="-1" autocomplete="off"></div>
+   <div class="field full"><label class="check"><input type="checkbox" id="o-priv" name="privacidade" required><span>Li o <button type="button" data-priv>aviso de privacidade</button> e autorizo o uso dos meus dados para responder a esta solicitação.</span></label><p class="err" id="o-priv-e"></p></div>
+   <div class="form-foot full"><button class="btn btn-pri" type="submit"><span class="spin" aria-hidden="true"></span><span class="lbl">Solicitar orçamento</span></button></div>
+   <p class="status full" role="status" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+
+<section class="trabalhe" id="trabalhe" aria-labelledby="h-trab">
+ <div class="wrap trab-grid">
+  <div class="rv">
+   <h2 id="h-trab">Faça parte da nossa equipe</h2>
+   <p class="lead">Tem interesse em trabalhar conosco? Envie suas informações para avaliação.</p>
+   <p class="trab-email">Se preferir, mande o currículo direto para <a class="email-bloco" href="mailto:ts.refrigeracaoclimatiza@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco">ts.refrigeracaoclimatiza@gmail.com</a>.</p>
+   <div class="trab-foto"><img src="assets/img/equipe-industrial.webp" width="1000" height="750" alt="Equipe da TS com equipamentos de proteção em área industrial" loading="lazy" decoding="async"></div>
+  </div>
+  <form class="form rv" id="form-trab" novalidate>
+   <div class="field full"><label for="t-nome">Nome completo</label><input id="t-nome" name="nome" autocomplete="name" required maxlength="100"><p class="err" id="t-nome-e"></p></div>
+   <div class="field"><label for="t-tel">Telefone</label><input id="t-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required><p class="err" id="t-tel-e"></p></div>
+   <div class="field"><label for="t-email">E-mail</label><input id="t-email" name="email" type="email" autocomplete="email" required maxlength="120"><p class="err" id="t-email-e"></p></div>
+   <div class="field"><label for="t-area">Área de interesse</label><select id="t-area" name="area" required><option value="">Selecione</option><option>Técnico em refrigeração e climatização</option><option>Auxiliar técnico</option><option>Higienização de bebedouros</option><option>Administrativo</option><option>Outra</option></select><p class="err" id="t-area-e"></p></div>
+   <div class="field"><label for="t-exp">Experiência profissional</label><select id="t-exp" name="experiencia" required><option value="">Selecione</option><option>Sem experiência</option><option>Até 1 ano</option><option>1 a 3 anos</option><option>3 a 5 anos</option><option>Mais de 5 anos</option></select><p class="err" id="t-exp-e"></p></div>
+   <div class="field full"><label for="t-msg">Mensagem de apresentação</label><textarea id="t-msg" name="mensagem" required maxlength="1500"></textarea><p class="err" id="t-msg-e"></p></div>
+   <p class="hint full" id="t-cv-aviso" hidden>Ao enviar, abriremos seu e-mail com a candidatura pronta, endereçada a ts.refrigeracaoclimatiza@gmail.com. É só anexar o currículo em PDF e enviar.</p>
+   <div class="field full" id="t-cv-campo"><label for="t-cv">Currículo em PDF</label><input id="t-cv" name="curriculo" type="file" accept="application/pdf,.pdf" required aria-describedby="t-cv-h"><p class="hint" id="t-cv-h">Somente PDF, até 5 MB.</p><p class="err" id="t-cv-e"></p></div>
+   <div class="hp" aria-hidden="true"><label for="t-site">Não preencha</label><input id="t-site" name="site" tabindex="-1" autocomplete="off"></div>
+   <div class="field full"><label class="check"><input type="checkbox" id="t-priv" name="privacidade" required><span>Li o <button type="button" data-priv>aviso de privacidade</button> e autorizo o uso dos meus dados para avaliação da candidatura.</span></label><p class="err" id="t-priv-e"></p></div>
+   <div class="form-foot full"><button class="btn btn-pri" type="submit"><span class="spin" aria-hidden="true"></span><span class="lbl">Enviar candidatura</span></button></div>
+   <p class="status full" role="status" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="rodape">
+ <div class="wrap">
+  <div class="rod-grid">
+   <div><img src="assets/logo-ts.webp" width="900" height="240" alt="TS Refrigeração e Climatização" loading="lazy">
+    <p>Climatização, manutenção de ar-condicionado e higienização de bebedouros e equipamentos industriais. Atendimento em Fortaleza e localidades próximas.</p>
+    <div class="sociais"><a href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento com a TS Refrigeração." aria-label="WhatsApp da TS Refrigeração (abre em nova aba)"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg></a><a href="https://www.instagram.com/ts.refrigeracao_climatizacao/" target="_blank" rel="noopener" aria-label="Instagram da TS Refrigeração (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg></a></div></div>
+   <div><h3>Serviços</h3><ul><li><a href="#climatizacao">Climatização</a></li><li><a href="#higienizacao">Limpeza Industrial</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#clientes">Clientes</a></li></ul></div>
+   <div><h3>Empresa</h3><ul><li><a href="#trabalhe">Trabalhe Conosco</a></li><li><a href="#orcamento">Solicitar orçamento</a></li><li><button type="button" data-priv style="font:inherit;background:none;border:0;padding:0;color:var(--texto);cursor:pointer">Política de privacidade</button></li></ul></div>
+   <div><h3>Contato</h3><ul><li><a href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento com a TS Refrigeração.">WhatsApp (85) 98534-1851</a></li><li><a href="mailto:ts.refrigeracaoclimatiza@gmail.com">ts.refrigeracaoclimatiza@gmail.com</a></li><li><a href="https://www.instagram.com/ts.refrigeracao_climatizacao/" target="_blank" rel="noopener">Instagram da TS</a></li></ul></div>
+  </div>
+  <div class="rod-base"><span>© <span id="ano">2026</span> TS Refrigeração &amp; Climatização · Thiago Bernardo da Silva · CNPJ 54.031.988/0001-85</span><button type="button" data-priv>Política de privacidade</button></div>
+ </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5585985341851?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20TS%20Refrigera%C3%A7%C3%A3o." target="_blank" rel="noopener" data-wa="Olá! Gostaria de solicitar um orçamento com a TS Refrigeração." aria-label="Fale conosco pelo WhatsApp (abre em nova aba)"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.6-2c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4-.6-5.7-1.6l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10.4 10.4 0 0 1-1.7-5.7C5.2 10 10 5.3 16 5.3s10.8 4.7 10.8 10.5S22 26.3 16 26.3zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg><span class="wa-tip" aria-hidden="true">Fale conosco pelo WhatsApp</span></a>
+
+<dialog class="lb" id="lb" aria-label="Imagem ampliada">
+ <div class="lb-in">
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+  <button class="lb-btn lb-x" type="button" data-lb-close aria-label="Fechar">×</button>
+  <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Imagem anterior">‹</button>
+  <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Próxima imagem">›</button>
+ </div>
+</dialog>
+
+<dialog class="priv" id="priv" aria-labelledby="priv-t">
+ <div class="priv-in">
+  <h2 id="priv-t">Aviso de privacidade</h2>
+  <p>Este aviso explica como a TS Refrigeração &amp; Climatização trata os dados enviados por este site, em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+  <h3>Quais dados coletamos</h3><p>Nome, telefone, e-mail, informações sobre o serviço desejado e, no caso de candidaturas, área de interesse, experiência, mensagem e currículo.</p>
+  <h3>Para que usamos</h3><p>Para responder às solicitações de orçamento e para avaliar candidaturas. Não vendemos nem compartilhamos esses dados para fins de publicidade.</p>
+  <h3>Como os dados chegam até nós</h3><p>Pelo WhatsApp, por e-mail (ts.refrigeracaoclimatiza@gmail.com) ou pelo serviço de formulário configurado no site. Os currículos não ficam públicos.</p>
+  <h3>Seus direitos</h3><p>Você pode pedir acesso, correção ou exclusão dos seus dados pelo e-mail ts.refrigeracaoclimatiza@gmail.com.</p>
+  <button class="btn btn-pri" type="button" data-priv-close>Entendi</button>
+ </div>
+</dialog>
+
+<canvas id="neve-cursor" aria-hidden="true"></canvas>
+
+<script>
+const TS_CONFIG = {
+  // Edite aqui os dados da empresa. Todos os botões e formulários usam esta configuração.
+  whatsapp: '5585985341851',
+  telefone: '+55 85 98534-1851',
+  emailCurriculos: 'ts.refrigeracaoclimatiza@gmail.com',
+  instagram: 'https://www.instagram.com/ts.refrigeracao_climatizacao/',
+  // Endereços de recebimento dos formulários (ex.: Formspree, Getform ou backend próprio).
+  // Enquanto estiverem vazios, o orçamento segue pelo WhatsApp e a candidatura pelo e-mail acima.
+  endpointOrcamento: '',
+  endpointCandidatura: '',
+  tamanhoMaxCurriculoMB: 5
+};
+</script>
+<script>
+(() => {
+ const d=document, root=d.documentElement; root.classList.add('js');
+ const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const waLink = m => 'https://wa.me/'+TS_CONFIG.whatsapp+'?text='+encodeURIComponent(m);
+ d.querySelectorAll('[data-wa]').forEach(a=>a.href=waLink(a.dataset.wa));
+ const ano=d.getElementById('ano'); if(ano) ano.textContent=new Date().getFullYear();
+
+ /* vídeos embutidos (versão de pré-visualização) */
+ d.querySelectorAll('video[data-b64]').forEach(v=>{
+  try{const el=d.getElementById(v.dataset.b64);const bin=atob(el.textContent.trim());const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+  v.src=URL.createObjectURL(new Blob([u],{type:'video/mp4'}));el.remove();}catch(e){console.warn('vídeo',e)}
+ });
+
+ /* neve leve do topo */
+ const hn=d.querySelector('.hero-neve');
+ for(let i=0;i<16;i++){const f=d.createElement('i');const z=(2+Math.random()*4).toFixed(1);f.style.cssText=`left:${(Math.random()*100).toFixed(1)}%;width:${z}px;height:${z}px;animation-duration:${(11+Math.random()*9).toFixed(1)}s;animation-delay:${(-Math.random()*14).toFixed(1)}s`;hn.appendChild(f)}
+
+ /* cabeçalho */
+ const hdr=d.getElementById('hdr');
+ const onScroll=()=>hdr.classList.toggle('scrolled',scrollY>12);
+ addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+ /* menu móvel */
+ const burger=d.querySelector('.burger'), mnav=d.getElementById('mnav');
+ const fecharMenu=()=>{mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Abrir menu')};
+ burger.addEventListener('click',()=>{const ab=!mnav.classList.contains('open');mnav.classList.toggle('open',ab);burger.setAttribute('aria-expanded',ab);burger.setAttribute('aria-label',ab?'Fechar menu':'Abrir menu');if(ab)mnav.querySelector('a').focus()});
+ mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',fecharMenu));
+ d.addEventListener('keydown',e=>{if(e.key==='Escape'&&mnav.classList.contains('open')){fecharMenu();burger.focus()}});
+ addEventListener('resize',()=>{if(innerWidth>1100)fecharMenu()});
+
+ /* link ativo */
+ const links=[...d.querySelectorAll('.nav a, .mnav a[href^="#"]:not(.btn)')];
+ const secoes=['inicio','climatizacao','higienizacao','galeria','clientes','trabalhe'].map(id=>d.getElementById(id));
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id));links.forEach(a=>{if(a.hasAttribute('aria-current'))a.setAttribute('aria-current','true')})}}),{rootMargin:'-45% 0px -50% 0px'});
+ secoes.forEach(s=>s&&io.observe(s));
+
+ /* revelação */
+ if(!reduz && 'IntersectionObserver' in window){
+  const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  d.querySelectorAll('.rv').forEach(el=>rv.observe(el));
+  d.querySelectorAll('.cards').forEach(g=>[...g.children].forEach((c,i)=>c.style.setProperty('--d',(i*0.07)+'s')));
+ } else d.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+
+ /* transição: neve e fluxo só quando visível */
+ const pas=d.querySelector('.passagem'), neve=pas.querySelector('.neve');
+ for(let i=0;i<22;i++){const f=d.createElement('i');const s=2+Math.random()*4;f.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${6+Math.random()*7}s;animation-delay:${-Math.random()*10}s`;neve.appendChild(f)}
+ new IntersectionObserver(es=>es.forEach(e=>pas.classList.toggle('in',e.isIntersecting))).observe(pas);
+
+ /* vídeos */
+ const vids=[...d.querySelectorAll('.vframe video:not([data-som])')];
+ const tocar=v=>{const p=v.play();if(p&&p.catch)p.catch(()=>{v.controls=true})};
+ vids.forEach(v=>{
+  const b=v.parentElement.querySelector('.vplay');
+  v.addEventListener('pause',()=>{if(b&&!v.controls)b.hidden=false});
+  v.addEventListener('play',()=>{if(b)b.hidden=true});
+  if(b)b.addEventListener('click',()=>{v.preload='auto';tocar(v)});
+  if(reduz)v.controls=true;
+ });
+ if(!reduz){
+  const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload==='none')v.preload='auto';tocar(v)}else v.pause()}),{threshold:.25});
+  vids.forEach(v=>vio.observe(v));
+ }
+
+ /* animação de entrada da higienização */
+ const hig=d.getElementById('higienizacao');
+ const bol=hig.querySelector('.bolhas');
+ for(let i=0;i<16;i++){const b=d.createElement('i');const z=6+Math.random()*14;b.style.cssText=`left:${4+Math.random()*92}%;width:${z}px;height:${z}px;--sx:${(Math.random()*60-30).toFixed(0)}px;animation-delay:${(1+Math.random()*1.6).toFixed(2)}s;animation-duration:${(2.6+Math.random()*2).toFixed(2)}s`;bol.appendChild(b)}
+ const cris=d.querySelector('.cristais');
+ for(let i=0;i<12;i++){const c=d.createElement('i');const ang=i/12*Math.PI*2+Math.random()*.4,dist=50+Math.random()*80;c.style.cssText=`--tx:${(Math.cos(ang)*dist).toFixed(0)}px;--ty:${(Math.sin(ang)*dist*.7).toFixed(0)}px;animation-delay:${(.5+Math.random()*.25).toFixed(2)}s`;cris.appendChild(c)}
+ const areas=[hig,d.getElementById('climatizacao')];
+ if(reduz||!('IntersectionObserver' in window))areas.forEach(a=>a.classList.add('ativa'));
+ else{
+  // entra na tela: toca a animação; sai totalmente da tela: prepara para tocar de novo
+  // dispara quando o cabeçalho da área aparece (descendo ou subindo a página)
+  const entra=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.closest('.area').classList.add('ativa')}),{threshold:.4});
+  const sai=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)e.target.closest('.area').classList.remove('ativa')}));
+  areas.forEach(a=>{const t=a.querySelector('.area-top');entra.observe(t);sai.observe(t)});
+ }
+
+
+ /* depoimento com som: só toca quando a pessoa pede */
+ const dv=d.querySelector('video[data-som]');
+ if(dv){
+  const db=dv.parentElement.querySelector('.vplay');
+  const assistir=()=>{vids.forEach(v=>v.pause());dv.controls=true;db.hidden=true;dv.muted=false;const p=dv.play();if(p&&p.catch)p.catch(()=>{db.hidden=false})};
+  db.addEventListener('click',assistir);
+  d.querySelectorAll('[data-depo-play]').forEach(b=>b.addEventListener('click',()=>{dv.closest('.depo').scrollIntoView({block:'center',behavior:reduz?'auto':'smooth'});assistir()}));
+  dv.addEventListener('play',()=>db.hidden=true);
+  if('IntersectionObserver' in window)new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting&&!dv.paused)dv.pause()}),{threshold:.1}).observe(dv);
+ }
+
+ /* antes e depois */
+ d.querySelectorAll('.ba-box').forEach(box=>{
+  const r=box.querySelector('.ba-range');
+  const set=v=>{box.style.setProperty('--pos',v+'%');r.setAttribute('aria-valuetext',Math.round(v)+'% antes, '+Math.round(100-v)+'% depois')};
+  r.addEventListener('input',()=>set(r.value)); set(r.value);
+ });
+
+ /* galeria e lightbox */
+ const fbtns=[...d.querySelectorAll('.filtros button')], itens=[...d.querySelectorAll('.g-item')], gst=d.getElementById('gal-status');
+ // no celular a galeria começa recolhida, com um botão para ver todas
+ const celular=matchMedia('(max-width: 900px)'), LIMITE=10, maisBox=d.querySelector('.gal-mais'), maisBtn=d.getElementById('gal-mais');
+ let filtroAtual='todos', expandida=false;
+ const filtrar=f=>{
+  filtroAtual=f; fbtns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));
+  const doFiltro=itens.filter(it=>f==='todos'||it.dataset.area===f);
+  const recolher=celular.matches&&!expandida&&doFiltro.length>LIMITE+2;
+  itens.forEach(it=>it.hidden=true);
+  doFiltro.forEach((it,i)=>it.hidden=recolher&&i>=LIMITE);
+  maisBox.hidden=!recolher;
+  if(recolher)maisBtn.textContent='Ver todas as fotos ('+doFiltro.length+')';
+  gst.textContent=(recolher?LIMITE:doFiltro.length)+' fotos exibidas';
+ };
+ maisBtn.addEventListener('click',()=>{expandida=true;const primeiraNova=itens.filter(it=>filtroAtual==='todos'||it.dataset.area===filtroAtual)[LIMITE];filtrar(filtroAtual);if(primeiraNova){const b=primeiraNova.querySelector('button');if(b)b.focus({preventScroll:true})}});
+ if(celular.addEventListener)celular.addEventListener('change',()=>filtrar(filtroAtual));
+ filtrar('todos');
+ fbtns.forEach(b=>b.addEventListener('click',()=>filtrar(b.dataset.f)));
+ d.querySelectorAll('[data-filtro-link]').forEach(a=>a.addEventListener('click',()=>filtrar(a.dataset.filtroLink)));
+ const lb=d.getElementById('lb'), lbImg=d.getElementById('lb-img'), lbCap=d.getElementById('lb-cap');
+ let lista=[], idx=0, origem=null;
+ const mostrar=i=>{idx=(i+lista.length)%lista.length;const im=lista[idx].querySelector('img');lbImg.style.opacity=0;const nova=new Image();nova.onload=()=>{lbImg.src=im.currentSrc||im.src;lbImg.alt=im.alt;lbCap.textContent=im.alt;lbImg.style.opacity=1};nova.src=im.currentSrc||im.src};
+ d.querySelectorAll('[data-lb]').forEach(b=>b.addEventListener('click',()=>{
+  const grupo=b.closest('.mini,.masonry');lista=[...grupo.querySelectorAll('[data-lb]')].filter(x=>!x.closest('[hidden]'));
+  origem=b;mostrar(lista.indexOf(b));lb.showModal();
+ }));
+ lb.querySelector('[data-lb-close]').onclick=()=>lb.close();
+ lb.querySelector('[data-lb-prev]').onclick=()=>mostrar(idx-1);
+ lb.querySelector('[data-lb-next]').onclick=()=>mostrar(idx+1);
+ lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')mostrar(idx-1);if(e.key==='ArrowRight')mostrar(idx+1)});
+ lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-in'))lb.close()});
+ lb.addEventListener('close',()=>origem&&origem.focus());
+ let tx=0; lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+ lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)mostrar(idx+(dx<0?1:-1))});
+
+ /* privacidade */
+ const priv=d.getElementById('priv');
+ d.querySelectorAll('[data-priv]').forEach(b=>b.addEventListener('click',()=>priv.showModal()));
+ priv.querySelector('[data-priv-close]').onclick=()=>priv.close();
+
+ /* serviço pré-selecionado */
+ d.querySelectorAll('[data-servico]').forEach(a=>a.addEventListener('click',()=>{const s=d.getElementById('o-serv');[...s.options].forEach(o=>{if(o.text===a.dataset.servico)s.value=o.value||o.text})}));
+
+ /* formulários */
+ const inicio=Date.now(); let ultimoEnvio=0;
+ const digitos=v=>v.replace(/\D/g,'');
+ const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+ function validar(form,regras){
+  let primeiro=null;
+  for(const [id,fn] of Object.entries(regras)){
+   const el=d.getElementById(id), err=d.getElementById(id+'-e'), msg=fn(el);
+   el.setAttribute('aria-invalid',msg?'true':'false');
+   if(msg){el.setAttribute('aria-describedby',[id+'-e',el.id==='t-cv'?'t-cv-h':''].join(' ').trim())}
+   err.textContent=msg||'';
+   if(msg&&!primeiro)primeiro=el;
+  }
+  if(primeiro)primeiro.focus();
+  return !primeiro;
+ }
+ const obrig=(t)=>el=>el.value.trim()?'':t;
+ const status=(form,tipo,txt)=>{const s=form.querySelector('.status');s.className='status full '+tipo;s.textContent=txt};
+ const ocupado=(form,on,lbl)=>{const b=form.querySelector('[type=submit]');b.disabled=on;b.classList.toggle('enviando',on);if(lbl)b.querySelector('.lbl').textContent=lbl};
+ function antiAbuso(form){
+  if(form.querySelector('.hp input').value)return 'bloqueado';
+  if(Date.now()-inicio<3000)return 'Aguarde alguns segundos e tente de novo.';
+  if(Date.now()-ultimoEnvio<30000)return 'Você acabou de enviar. Aguarde 30 segundos para enviar de novo.';
+  return '';
+ }
+ async function postar(url,form){
+  const r=await fetch(url,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+  if(!r.ok)throw new Error('HTTP '+r.status);
+ }
+ const fo=d.getElementById('form-orc');
+ fo.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const ok=validar(fo,{
+   'o-nome':obrig('Informe seu nome.'),
+   'o-tel':el=>{const n=digitos(el.value).length;return !n?'Informe um telefone ou WhatsApp.':(n<10||n>13)?'Confira o número: use DDD + número, ex.: (85) 98534-1851.':''},
+   'o-email':el=>el.value.trim()&&!emailOk(el.value.trim())?'Confira o e-mail, ex.: nome@empresa.com.':'',
+   'o-serv':obrig('Escolha o tipo de serviço.'),
+   'o-tipo':obrig('Escolha o tipo de cliente.'),
+   'o-desc':el=>el.value.trim().length<10?'Descreva sua necessidade em pelo menos 10 caracteres.':'',
+   'o-priv':el=>el.checked?'':'Para enviar, confirme que leu o aviso de privacidade.'
+  });
+  if(!ok){status(fo,'erro','Corrija os campos destacados para continuar.');return}
+  const ab=antiAbuso(fo); if(ab==='bloqueado')return; if(ab){status(fo,'erro',ab);return}
+  const v=id=>d.getElementById(id).value.trim();
+  if(TS_CONFIG.endpointOrcamento){
+   ocupado(fo,true,'Enviando…');status(fo,'info','Enviando sua solicitação…');
+   try{await postar(TS_CONFIG.endpointOrcamento,fo);ultimoEnvio=Date.now();fo.reset();status(fo,'ok','Solicitação enviada. Nossa equipe vai entrar em contato pelo telefone informado.')}
+   catch(err){status(fo,'erro','Não foi possível enviar agora. Tente de novo ou chame a gente pelo WhatsApp (85) 98534-1851.')}
+   finally{ocupado(fo,false,'Solicitar orçamento')}
+   return;
+  }
+  const msg=['Olá! Gostaria de solicitar um orçamento com a TS Refrigeração.','','Nome: '+v('o-nome'),'Telefone: '+v('o-tel'),v('o-email')?'E-mail: '+v('o-email'):'','Serviço: '+v('o-serv'),'Cliente: '+v('o-tipo'),'','Necessidade:',v('o-desc')].filter((l,i,a)=>l!==''||a[i-1]!=='').join('\n');
+  const w=window.open(waLink(msg),'_blank'); if(w) try{w.opener=null}catch(e){}
+  ultimoEnvio=Date.now();
+  if(w===null){status(fo,'info','Abra o WhatsApp para concluir: ');const a=d.createElement('a');a.href=waLink(msg);a.target='_blank';a.rel='noopener';a.textContent='enviar mensagem pronta';fo.querySelector('.status').appendChild(a)}
+  else status(fo,'info','Abrimos o WhatsApp com sua mensagem pronta. Toque em enviar na conversa para concluir a solicitação.');
+ });
+
+ const ft=d.getElementById('form-trab');
+ if(!TS_CONFIG.endpointCandidatura){const c=d.getElementById('t-cv-campo');c.hidden=true;d.getElementById('t-cv').required=false;d.getElementById('t-cv-aviso').hidden=false}
+ ft.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const maxB=TS_CONFIG.tamanhoMaxCurriculoMB*1024*1024;
+  const ok=validar(ft,{
+   't-nome':el=>el.value.trim().split(/\s+/).length<2?'Informe seu nome completo.':'',
+   't-tel':el=>{const n=digitos(el.value).length;return !n?'Informe um telefone.':(n<10||n>13)?'Confira o número: use DDD + número.':''},
+   't-email':el=>!el.value.trim()?'Informe seu e-mail.':!emailOk(el.value.trim())?'Confira o e-mail, ex.: nome@email.com.':'',
+   't-area':obrig('Escolha uma área de interesse.'),
+   't-exp':obrig('Informe sua experiência.'),
+   't-msg':el=>el.value.trim().length<20?'Escreva uma apresentação com pelo menos 20 caracteres.':'',
+   't-cv':el=>{if(!TS_CONFIG.endpointCandidatura)return '';const f=el.files[0];if(!f)return 'Anexe seu currículo em PDF.';if(!/\.pdf$/i.test(f.name)||(f.type&&f.type!=='application/pdf'))return 'O currículo precisa estar em PDF.';if(f.size>maxB)return 'O arquivo tem mais de '+TS_CONFIG.tamanhoMaxCurriculoMB+' MB. Envie um PDF menor.';return ''},
+   't-priv':el=>el.checked?'':'Para enviar, confirme que leu o aviso de privacidade.'
+  });
+  if(!ok){status(ft,'erro','Corrija os campos destacados para continuar.');return}
+  const ab=antiAbuso(ft); if(ab==='bloqueado')return; if(ab){status(ft,'erro',ab);return}
+  const v=id=>d.getElementById(id).value.trim();
+  if(TS_CONFIG.endpointCandidatura){
+   ocupado(ft,true,'Enviando…');status(ft,'info','Enviando sua candidatura…');
+   try{await postar(TS_CONFIG.endpointCandidatura,ft);ultimoEnvio=Date.now();ft.reset();status(ft,'ok','Candidatura enviada. Se o seu perfil combinar com uma vaga, entraremos em contato.')}
+   catch(err){status(ft,'erro','Não foi possível enviar agora. Tente de novo em alguns minutos.')}
+   finally{ocupado(ft,false,'Enviar candidatura')}
+   return;
+  }
+  const em=TS_CONFIG.emailCurriculos;
+  const assunto='Candidatura - '+v('t-nome')+' - '+v('t-area');
+  const corpo=['Olá! Tenho interesse em trabalhar na TS Refrigeração.','','Nome: '+v('t-nome'),'Telefone: '+v('t-tel'),'E-mail: '+v('t-email'),'Área de interesse: '+v('t-area'),'Experiência: '+v('t-exp'),'','Apresentação:',v('t-msg'),'','Currículo em PDF em anexo.'].join('\n');
+  ultimoEnvio=Date.now();
+  location.href='mailto:'+em+'?subject='+encodeURIComponent(assunto)+'&body='+encodeURIComponent(corpo);
+  status(ft,'info','');
+  const st=ft.querySelector('.status');
+  st.textContent='Abrimos seu e-mail com a candidatura pronta. Anexe o currículo em PDF e envie para concluir. Se o e-mail não abriu, envie direto para ';
+  const a=d.createElement('a');a.href='mailto:'+em;a.textContent=em;st.appendChild(a);st.appendChild(d.createTextNode('.'));
+ });
+
+ /* neve no cursor */
+ const fino=matchMedia('(hover: hover) and (pointer: fine)').matches;
+ const cv=d.getElementById('neve-cursor');
+ if(!fino||reduz){cv.remove();return}
+ const ctx=cv.getContext('2d'); let W,Hh,dpr; const flocos=[]; let rodando=false, ultimo=0;
+ const tam=()=>{dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;Hh=innerHeight;cv.width=W*dpr;cv.height=Hh*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)};
+ tam(); addEventListener('resize',tam);
+ const cor=getComputedStyle(root).getPropertyValue('--ar').trim()||'#2E8FD1';
+ function floco(x,y,r,a){ctx.globalAlpha=a;ctx.strokeStyle=cor;ctx.lineWidth=1.2;ctx.beginPath();for(let k=0;k<3;k++){const t=k*Math.PI/3;ctx.moveTo(x-Math.cos(t)*r,y-Math.sin(t)*r);ctx.lineTo(x+Math.cos(t)*r,y+Math.sin(t)*r)}ctx.stroke()}
+ function passo(){
+  ctx.clearRect(0,0,W,Hh);
+  for(let i=flocos.length-1;i>=0;i--){const f=flocos[i];f.v+=1;f.x+=f.dx;f.y+=f.dy;f.dy+=.015;const a=Math.max(0,f.a*(1-f.v/f.vida));if(f.v>=f.vida){flocos.splice(i,1);continue}floco(f.x,f.y,f.r,a)}
+  if(flocos.length)requestAnimationFrame(passo);else{rodando=false;ctx.clearRect(0,0,W,Hh)}
+ }
+ addEventListener('mousemove',e=>{
+  const t=performance.now(); if(t-ultimo<45||flocos.length>=34)return; ultimo=t;
+  flocos.push({x:e.clientX+(Math.random()*16-8),y:e.clientY+(Math.random()*16-8),r:2.5+Math.random()*3.5,a:.35+Math.random()*.45,dx:Math.random()*.6-.3,dy:.2+Math.random()*.4,v:0,vida:45+Math.random()*35});
+  if(!rodando){rodando=true;requestAnimationFrame(passo)}
+ },{passive:true});
+ d.addEventListener('visibilitychange',()=>{if(d.hidden)flocos.length=0});
+})();
+</script>
+</body>
 </html>
